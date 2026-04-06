@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沖繩旅遊行程 2026・9/9–9/13</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ocean: #006994;
+    --sky: #4fb3d9;
+    --sand: #e8d5b0;
+    --coral: #e07a5f;
+    --teal: #2a9d8f;
+    --night: #1a2744;
+    --cream: #fdf8f0;
+    --gold: #c9a84c;
+    --text: #2c2c2c;
+    --light-text: #666;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--night);
+    color: white;
+    position: relative;
+    padding: 60px 40px 80px;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(0,105,148,0.6) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(42,157,143,0.4) 0%, transparent 50%),
+      radial-gradient(ellipse at 60% 80%, rgba(224,122,95,0.3) 0%, transparent 40%);
+  }
+  .hero-inner {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .hero-label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--sky);
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--sky);
+  }
+  .hero-subtitle {
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 32px;
+    letter-spacing: 1px;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .hero-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 8px 16px;
+    border-radius: 40px;
+    font-size: 13px;
+  }
+  .hero-badge .icon { font-size: 16px; }
+
+  /* HOTEL INFO */
+  .hotel-bar {
+    background: var(--ocean);
+    color: white;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+  .hotel-bar strong { font-weight: 500; }
+
+  /* NAV */
+  .day-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    border-bottom: 2px solid var(--sand);
+    padding: 0 40px;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .day-nav::-webkit-scrollbar { display: none; }
+  .day-nav a {
+    text-decoration: none;
+    color: var(--light-text);
+    font-size: 13px;
+    font-weight: 400;
+    padding: 14px 20px;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    white-space: nowrap;
+    transition: all 0.2s;
+    letter-spacing: 0.5px;
+  }
+  .day-nav a:hover, .day-nav a.active {
+    color: var(--ocean);
+    border-bottom-color: var(--ocean);
+    font-weight: 500;
+  }
+
+  /* MAIN LAYOUT */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  /* DAY SECTION */
+  .day-section {
+    padding: 60px 0 20px;
+    border-top: 1px solid var(--sand);
+  }
+  .day-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  .day-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    color: var(--sand);
+    line-height: 1;
+    min-width: 72px;
+    font-weight: 700;
+  }
+  .day-info h2 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--night);
+    margin-bottom: 4px;
+  }
+  .day-info .day-date {
+    font-size: 13px;
+    color: var(--light-text);
+    letter-spacing: 1px;
+  }
+  .day-transport-badge {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+  .badge-transit { background: #e3f2fd; color: #1565c0; }
+  .badge-car { background: #e8f5e9; color: #2e7d32; }
+
+  /* SUMMARY BOX */
+  .day-summary {
+    background: var(--night);
+    color: white;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .summary-item { font-size: 13px; }
+  .summary-item .label {
+    color: rgba(255,255,255,0.5);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .summary-item .value { font-size: 14px; font-weight: 400; }
+
+  /* ROUTE TABS */
+  .route-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .route-tab {
+    padding: 8px 20px;
+    border-radius: 40px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+  }
+  .route-tab-a { background: var(--ocean); color: white; }
+  .route-tab-b { background: white; color: var(--ocean); border: 1.5px solid var(--ocean); }
+  .route-tab.inactive { opacity: 0.4; }
+
+  /* TIMELINE */
+  .timeline-shared { margin-bottom: 8px; }
+  .timeline {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 0;
+  }
+  .timeline-time {
+    padding: 0 20px 0 0;
+    text-align: right;
+    position: relative;
+  }
+  .timeline-time::after {
+    content: '';
+    position: absolute;
+    right: -1px;
+    top: 8px;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--sky), var(--sand));
+  }
+  .tl-row { display: contents; }
+  .tl-time {
+    padding: 16px 20px 16px 0;
+    text-align: right;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ocean);
+    position: relative;
+    white-space: nowrap;
+  }
+  .tl-time::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 22px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--ocean);
+    border: 2px solid white;
+    box-shadow: 0 0 0 1px var(--ocean);
+  }
+  .tl-time.transport::after { background: var(--light-text); box-shadow: 0 0 0 1px var(--light-text); }
+  .tl-content {
+    padding: 12px 0 12px 28px;
+    border-left: 2px solid var(--sand);
+  }
+
+  /* SPOT CARDS */
+  .spot-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 4px;
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
+  }
+  .spot-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.1); }
+  .spot-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .spot-icon { font-size: 24px; }
+  .spot-title-wrap { flex: 1; }
+  .spot-name {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--night);
+    margin-bottom: 2px;
+  }
+  .spot-meta { font-size: 11px; color: var(--light-text); display: flex; gap: 12px; flex-wrap: wrap; }
+  .spot-meta span::before { content: '• '; }
+  .spot-meta span:first-child::before { content: ''; }
+  .chevron {
+    font-size: 12px;
+    color: var(--light-text);
+    transition: transform 0.3s;
+  }
+  .spot-card.open .chevron { transform: rotate(180deg); }
+  .spot-body {
+    display: none;
+    padding: 0 20px 20px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+  }
+  .spot-card.open .spot-body { display: block; }
+
+  .spot-photo {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 16px 0;
+    background: linear-gradient(135deg, var(--sky) 0%, var(--ocean) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: white;
+    overflow: hidden;
+  }
+  .spot-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+  }
+  .info-item {
+    background: var(--cream);
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+  .info-item .il { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--light-text); margin-bottom: 4px; }
+  .info-item .iv { font-size: 13px; font-weight: 500; color: var(--text); }
+
+  .spot-desc {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--light-text);
+    margin: 12px 0;
+  }
+  .highlight-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+  }
+  .highlight-list li {
+    display: flex;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text);
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .highlight-list li::before {
+    content: '✦';
+    color: var(--gold);
+    font-size: 10px;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+  .rec-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--ocean);
+    margin: 16px 0 8px;
+  }
+  .map-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--ocean);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-top: 12px;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+  }
+  .map-btn:hover { background: var(--night); }
+
+  /* TRANSPORT ROW */
+  .transport-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0 8px 28px;
+    border-left: 2px solid var(--sand);
+  }
+  .transport-info {
+    font-size: 12px;
+    color: var(--light-text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .transport-info .transport-icon { font-size: 16px; }
+  .transport-duration {
+    background: var(--sand);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  /* MAP FRAME */
+  .map-section {
+    margin: 24px 0 40px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--sand);
+  }
+  .map-header {
+    background: var(--ocean);
+    color: white;
+    padding: 12px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .map-placeholder {
+    height: 300px;
+    background: linear-gradient(135deg, #e8f4f8 0%, #d1ecf1 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .map-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    color: var(--ocean);
+    padding: 12px 24px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 2px solid var(--ocean);
+    transition: all 0.2s;
+    box-shadow: 0 2px 12px rgba(0,105,148,0.15);
+  }
+  .map-link-btn:hover { background: var(--ocean); color: white; }
+  .map-emoji { font-size: 48px; }
+  .map-label { font-size: 14px; color: var(--light-text); }
+
+  /* NOTICE */
+  .notice {
+    background: #fff8e1;
+    border-left: 4px solid var(--gold);
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: var(--text);
+    margin: 16px 0;
+    line-height: 1.7;
+  }
+  .notice strong { color: #b8860b; }
+
+  /* ROUTE SECTION (hidden/shown) */
+  .route-section { display: none; }
+  .route-section.active { display: block; }
+
+  /* FOOTER */
+  footer {
+    background: var(--night);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 40px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 60px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .hero { padding: 40px 20px 60px; }
+    .hero-meta { gap: 12px; }
+    .day-nav { padding: 0 16px; }
+    .container { padding: 0 16px; }
+    .timeline { grid-template-columns: 90px 1fr; }
+    .day-summary { grid-template-columns: 1fr; gap: 12px; }
+    .hotel-bar { padding: 12px 20px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-label">✈ 沖繩旅遊行程規劃</div>
+    <h1 class="hero-title"><em>沖繩</em><br>自由行攻略</h1>
+    <div class="hero-subtitle">2026 年 9 月 9 日（三）— 9 月 13 日（日）・5 天 4 夜</div>
+    <div class="hero-meta">
+      <div class="hero-badge"><span class="icon">👥</span><span>12 人同行</span></div>
+      <div class="hero-badge"><span class="icon">🏨</span><span>2 處住宿・縣廳前站集合</span></div>
+      <div class="hero-badge"><span class="icon">🚌</span><span>D1・D5 大眾交通</span></div>
+      <div class="hero-badge"><span class="icon">🚗</span><span>D3–D5 考慮包車</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- HOTEL BAR -->
+<div class="hotel-bar">
+  🏨 &nbsp; 住宿 A：<strong>Toyoko Inn Okinawa Naha Asahibashi Ekimae</strong>（旭橋駅前）&nbsp;・&nbsp;住宿 B：<strong>另一住宿</strong>（縣廳前站周邊）&nbsp;・&nbsp;統一集合：縣廳前站&nbsp;・&nbsp;D5 提供行李寄送機場服務
+</div>
+
+<!-- DAY NAV -->
+<nav class="day-nav" id="dayNav">
+  <a href="#day1" class="active">Day 1・9/9 抵達</a>
+  <a href="#day2">Day 2・9/10 北部</a>
+  <a href="#day3">Day 3・9/11 中北部</a>
+  <a href="#day4">Day 4・9/12 中部</a>
+  <a href="#day5">Day 5・9/13 那霸</a>
+</nav>
+
+<div class="container">
+
+<!-- ===================== DAY 1 ===================== -->
+<section class="day-section" id="day1">
+  <div class="day-header">
+    <div class="day-number">01</div>
+    <div class="day-info">
+      <h2>抵達沖繩・機場南部探索</h2>
+      <div class="day-date">9 月 9 日（週三）</div>
+      <div class="day-transport-badge badge-transit">🚌 大眾交通工具</div>
+    </div>
+  </div>
+
+  <div class="day-summary">
+    <div class="summary-item">
+      <div class="label">✈ 抵達時段</div>
+      <div class="value">12:30 / 13:00 / 14:00 分批抵達</div>
+    </div>
+    <div class="summary-item">
+      <div class="label">📍 活動範圍</div>
+      <div class="value">機場周邊・那霸南部・縣廳前</div>
+    </div>
+    <div class="summary-item">
+      <div class="label">🌙 行程結束</div>
+      <div class="value">路線A ≈ 20:30 / 路線B ≈ 21:50 回飯店</div>
+    </div>
+    <div class="summary-item">
+      <div class="label">📝 注意事項</div>
+      <div class="value">沒有人先行前往飯店，全員在機場集合</div>
+    </div>
+  </div>
+
+  <div style="background:white;border:1px solid rgba(0,0,0,0.08);border-radius:16px;padding:20px;margin:16px 0;">
+    <div style="font-size:12px;font-weight:600;letter-spacing:2px;color:#006994;text-transform:uppercase;margin-bottom:12px;">💴 Day 1 預估費用（每人）</div>
+    <div style="font-size:11px;letter-spacing:1px;color:#4fb3d9;font-weight:600;margin:10px 0 4px;text-transform:uppercase;">路線 A</div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🎟️ 沖繩世界・玉泉洞</span>
+        <span style="font-size:13px;font-weight:600;">¥2,000</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🚌 那霸機場→玉泉洞（83/54號公車）</span>
+        <span style="font-size:13px;font-weight:600;">¥590</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🚌 玉泉洞→漫畫倉庫（83/54號回程公車）</span>
+        <span style="font-size:13px;font-weight:600;">¥590</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;background:#1a2744;color:white;margin:3px 0;">
+        <span style="font-size:13px;font-weight:600;">💰 小計（門票＋交通）</span>
+        <span style="font-size:13px;font-weight:600;font-weight:600;">¥3,450</span>
+      </div><div style="font-size:11px;letter-spacing:1px;color:#4fb3d9;font-weight:600;margin:10px 0 4px;text-transform:uppercase;">路線 B</div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🎟️ 景點入場</span>
+        <span style="font-size:13px;font-weight:600;">免費（不含餐飲）</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🚌 機場→瀨長島（接駁巴士）</span>
+        <span style="font-size:13px;font-weight:600;">¥300</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🚕 瀨長島→奧武島（計程車分攤）</span>
+        <span style="font-size:13px;font-weight:600;">約¥200</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🚌 奧武島→漫畫倉庫（54號公車）</span>
+        <span style="font-size:13px;font-weight:600;">¥820</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;background:#1a2744;color:white;margin:3px 0;">
+        <span style="font-size:13px;font-weight:600;">💰 小計（交通）</span>
+        <span style="font-size:13px;font-weight:600;font-weight:600;">約¥1,320</span>
+      </div>
+    <div style="font-size:12px;color:#666;margin-top:10px;padding:8px 12px;background:#fdf8f0;border-radius:8px;">⚠️ 以上未含餐飲費用，Day 1 無包車費用（全程大眾交通）</div>
+  </div>
+
+  <div class="notice">⚠️ <strong>重要提醒：</strong>路線 A（沖繩世界）末班受理時間為 16:00，閉園 17:30。各人出關約需 45 分鐘，全員最晚 14:50 集合（天馬航空 BC593 14:05 落地，出關後 14:50）。若選路線 A，搭公車約 45–60 分鐘，預計 15:30–15:45 抵達玉泉洞，最晚受理 16:00，<strong>入場時間極為緊湊，建議預先購好電子票</strong>，可略過售票隊伍直接入場，實際停留 1 小時 30 分–2 小時，仍可欣賞鐘乳洞與逛土產店。路線 B 彈性較高，推薦時間較充裕的選擇。
+  </div>
+
+  <div class="timeline-shared">
+    <div class="timeline">
+      <div class="tl-time">12:20–14:50</div>
+      <div class="tl-content">
+        <div class="spot-card" onclick="toggleCard(this)">
+          <div class="spot-card-header">
+            <div class="spot-icon">✈️</div>
+            <div class="spot-title-wrap">
+              <div class="spot-name">那霸機場 · 分批入境・全員集合</div>
+              <div class="spot-meta"><span>落地 12:20 / 13:00 / 14:05，各自出關約 45 分鐘</span><span>14:50 全員集合後統一出發</span></div>
+            </div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="spot-body">
+            <div class="info-grid">
+              <div class="info-item"><div class="il">樂桃 MM922</div><div class="iv">桃園 09:35 → 那霸 12:20 落地，出關 ≈ 13:05</div></div>
+              <div class="info-item"><div class="il">虎航 IT288</div><div class="iv">高雄 10:10 → 那霸 13:00 落地，出關 ≈ 13:45</div></div>
+              <div class="info-item"><div class="il">天馬 BC593</div><div class="iv">神戶 11:55 → 那霸 14:05 落地，出關 ≈ 14:50</div></div>
+              <div class="info-item"><div class="il">集合地點</div><div class="iv">14:50 那霸機場 1F 入境大廳・等待全員後統一出發</div></div>
+              <div class="info-item"><div class="il">等待建議</div><div class="iv">先辦好 SIM 卡・換錢・逛免稅店，Blue Seal 冰淇淋可解饞</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROUTE TABS -->
+  <div class="route-tabs">
+    <button class="route-tab route-tab-a" onclick="switchRoute('day1','A')">路線 A・沖繩世界＋漫畫倉庫</button>
+    <button class="route-tab route-tab-b inactive" onclick="switchRoute('day1','B')">路線 B・瀨長島＋奧武島</button>
+  </div>
+
+  <!-- ROUTE A -->
+  <div id="day1-routeA" class="route-section active">
+    <div class="timeline">
+      <!-- 交通 -->
+      <div class="tl-time transport"></div>
+      <div class="transport-row">
+        <div class="transport-info">
+          <span class="transport-icon">🚌</span>
+          <span>機場巴士總站 → 83 號或 54 號巴士 → 玉泉洞站</span>
+          <span class="transport-duration">約 45–60 分鐘 ／ 車資 ¥590</span>
+        </div>
+      </div>
+
+      <!-- 14:30~14:45 抵達 -->
+      <div class="tl-time">15:40–17:30</div>
+      <div class="tl-content">
+        <div class="spot-card" onclick="toggleCard(this)">
+          <div class="spot-card-header">
+            <div class="spot-icon">🪨</div>
+            <div class="spot-title-wrap">
+              <div class="spot-name">沖繩世界文化王國・玉泉洞</div>
+              <div class="spot-meta"><span>停留 1 小時 50 分鐘</span><span>最晚受理 16:00</span><span>閉園 17:30</span></div>
+            </div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="spot-body">
+            <div class="spot-photo">🦎</div>
+            <div class="info-grid">
+              <div class="info-item"><div class="il">門票</div><div class="iv">成人 ¥2,000 ／ 兒童 ¥1,000（4–14 歲）</div></div>
+              <div class="info-item"><div class="il">開放時間</div><div class="iv">09:00–17:30（最後入場 16:00）</div></div>
+              <div class="info-item"><div class="il">停留建議</div><div class="iv">3–4 小時（含表演）</div></div>
+              <div class="info-item"><div class="il">交通</div><div class="iv">83/54 號巴士，玉泉洞站下車</div></div>
+            </div>
+            <div class="spot-desc">沖繩世界文化王國是沖繩南部最具代表性的主題公園，以擁有日本第二大鐘乳石洞「玉泉洞」聞名。園內共有三大核心景區：全長 5 公里、歷經 30 萬年形成的鐘乳石洞、百年古民家聚落「琉球王國城下町」，以及毒蛇博物公園。</div>
+            <div class="rec-label">🌟 必看體驗</div>
+            <ul class="highlight-list">
+              <li>玉泉洞鐘乳石洞（開放 890 公尺，步行約 40–60 分鐘）</li>
+              <li>SUPER EISA 太鼓舞表演（10:30 / 12:30 / 14:30 / 16:00）</li>
+              <li>毒蛇秀（11:30 / 13:30 / 15:30）</li>
+              <li>琉球王國城下町・傳統工藝體驗（彩繪風獅爺 ¥1,500 起）</li>
+              <li>出口大型土產店——沖繩伴手禮大集合</li>
+            </ul>
+            <div class="notice">💡 約 15:40 入場，最晚受理 16:00，<strong>強烈建議提前購好電子票</strong>（Klook/KKday）可直接入場。入場後直衝鐘乳石洞（40–60 分鐘），出來後逛王國村與土產店至閉園。16:00 太鼓舞最後一場可能來不及，以鐘乳洞為主要目標。洞內有水滴，建議戴帽。</div>
+            <a href="https://maps.app.goo.gl/okinawa-world" target="_blank" class="map-btn">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 交通 -->
+      <div class="tl-time transport"></div>
+      <div class="transport-row">
+        <div class="transport-info">
+          <span class="transport-icon">🚌</span>
+          <span>玉泉洞站 → 那霸公車總站 → 步行至漫畫倉庫</span>
+          <span class="transport-duration">約 50–60 分鐘</span>
+        </div>
+      </div>
+
+      <!-- 漫畫倉庫 -->
+      <div class="tl-time">18:20–20:20</div>
+      <div class="tl-content">
+        <div class="spot-card" onclick="toggleCard(this)">
+          <div class="spot-card-header">
+            <div class="spot-icon">📚</div>
+            <div class="spot-title-wrap">
+              <div class="spot-name">漫畫倉庫 那霸小禄店</div>
+              <div class="spot-meta"><span>停留 2 小時</span><span>二手商品購物天堂</span></div>
+            </div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="spot-body">
+            <div class="info-grid">
+              <div class="info-item"><div class="il">費用</div><div class="iv">免費入場（購物自費）</div></div>
+              <div class="info-item"><div class="il">特色</div><div class="iv">二手遊戲、漫畫、CD、玩具</div></div>
+              <div class="info-item"><div class="il">地址</div><div class="iv">那覇市高良3丁目（赤嶺駅旁，步行 2 分鐘）</div></div>
+            </div>
+            <div class="spot-desc">沖繩知名二手連鎖店，可以挖到便宜的二手遊戲機、漫畫、CD、玩具、模型等。位於那霸小禄地區，距赤嶺駅（Yui-Rail）僅步行 2 分鐘，交通非常方便。</div>
+            <a href="https://maps.app.goo.gl/ZARbrNbDYATCAsTt6" target="_blank" class="map-btn">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 交通回飯店 -->
+      <div class="tl-time transport"></div>
+      <div class="transport-row">
+        <div class="transport-info">
+          <span class="transport-icon">🚇</span>
+          <span>漫畫倉庫步行 2 分鐘至赤嶺駅 → 搭 Yui-Rail 至縣廳前駅</span>
+          <span class="transport-duration">約 20 分鐘 ／ ¥270</span>
+        </div>
+      </div>
+
+      <div class="tl-time">≈ 20:45</div>
+      <div class="tl-content">
+        <div style="padding: 12px 0; font-size: 13px; color: var(--light-text);">🏨 回飯店 Check-in・休息</div>
+      </div>
+    </div>
+
+    <!-- MAP -->
+    <div class="map-section">
+      <div class="map-header">🗺️ Day 1 路線 A・Google Maps 路線圖</div>
+      <div class="map-placeholder">
+        <div class="map-emoji">🗺️</div>
+        <div class="map-label">那霸機場 → 沖繩世界・玉泉洞 → 漫畫倉庫 → 飯店</div>
+        <a href="https://www.google.com/maps/dir/那霸機場/沖縄ワールド文化王国・玉泉洞/漫画倉庫 那覇新都心店/Toyoko+Inn+Okinawa+Naha+Asahibashi+Ekimae" target="_blank" class="map-link-btn">📍 在 Google Maps 開啟路線</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROUTE B -->
+  <div id="day1-routeB" class="route-section">
+    <div class="timeline">
+      <div class="tl-time transport"></div>
+      <div class="transport-row">
+        <div class="transport-info">
+          <span class="transport-icon">🚌</span>
+          <span>那霸機場/赤嶺站 → 瀨長島接駁巴士（Umikaji Terrace shuttle）</span>
+          <span class="transport-duration">約 10–15 分鐘 ／ ¥300</span>
+        </div>
+      </div>
+
+      <div class="tl-time">15:05–16:35</div>
+      <div class="tl-content">
+        <div class="spot-card" onclick="toggleCard(this)">
+          <div class="spot-card-header">
+            <div class="spot-icon">✈️</div>
+            <div class="spot-title-wrap">
+              <div class="spot-name">瀨長島 Umikaji Terrace</div>
+              <div class="spot-meta"><span>停留 1 小時 30 分鐘</span><span>免費入場</span></div>
+            </div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="spot-body">
+            <div class="spot-photo">🏝️</div>
+            <div class="info-grid">
+              <div class="info-item"><div class="il">費用</div><div class="iv">免費入場（餐飲自費）</div></div>
+              <div class="info-item"><div class="il">開放時間</div><div class="iv">各店依需，大多 10:00–21:00</div></div>
+              <div class="info-item"><div class="il">特色</div><div class="iv">白色地中海建築・看飛機降落</div></div>
+              <div class="info-item"><div class="il">距機場</div><div class="iv">約 1.5 公里，計程車不到 10 分鐘</div></div>
+            </div>
+            <div class="spot-desc">瀨長島是距那霸機場最近的打卡景點，白色地中海風格的 Umikaji Terrace 商店街沿著山坡一字排開，可以邊喝咖啡邊欣賞飛機從頭頂低空飛過的壯觀景象。這裡也有各種輕食、冰淇淋、炸雞等小吃，非常適合抵達後放鬆下午茶。</div>
+            <div class="rec-label">🌟 必做體驗</div>
+            <ul class="highlight-list">
+              <li>坐在露天座位喝咖啡，欣賞飛機低空降落</li>
+              <li>走到島嶼最高點觀景台，俯瞰機場與海景</li>
+              <li>Blue Seal 冰淇淋沖繩口味（黑糖、紅芋等）</li>
+            </ul>
+            <div class="rec-label">🍽️ 推薦餐廳</div>
+            <ul class="highlight-list">
+              <li>ZHYVAGO COFFEE WORKS OKINAWA（海景咖啡）</li>
+              <li>UMIKAJI TERRACE 各店（炸雞、薩摩亞料理）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-time transport"></div>
+      <div class="transport-row">
+        <div class="transport-info">
+          <span class="transport-icon">🚗</span>
+          <span>瀨長島 → 奧武島（計程車，無直達公車）</span>
+          <span class="transport-duration">約 25 分鐘 ／ 約 ¥2,500（4人1台，分3台）</span>
+        </div>
+      </div>
+
+      <div class="tl-time">17:00–19:30</div>
+      <div class="tl-content">
+        <div class="spot-card" onclick="toggleCard(this)">
+          <div class="spot-card-header">
+            <div class="spot-icon">🐟</div>
+            <div class="spot-title-wrap">
+              <div class="spot-name">奧武島・天婦羅 + 晚餐</div>
+              <div class="spot-meta"><span>停留 2 小時 30 分鐘</span><span>免費入島</span><span>天婦羅聖地</span></div>
+            </div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="spot-body">
+            <div class="spot-photo">🎣</div>
+            <div class="info-grid">
+              <div class="info-item"><div class="il">費用</div><div class="iv">免費入島（餐飲自費）</div></div>
+              <div class="info-item"><div class="il">特色</div><div class="iv">沖繩天婦羅名島・貓島・漁港風情</div></div>
+            </div>
+            <div class="spot-desc">奧武島是一座透過小橋與本島相連的漁業小島，以沖繩式天婦羅（天ぷら）聞名全島，用現炸新鮮海鮮製作，價格親民（一塊約 ¥70–100）。島上還有許多悠閒的貓咪，是沖繩難得的「貓島」，適合一邊吃天婦羅一邊與貓咪同樂。</div>
+            <div class="rec-label">🌟 必吃必看</div>
+            <ul class="highlight-list">
+              <li>中本てんぷら店——最有名的天婦羅老店（需排隊）</li>
+              <li>大城てんぷら店——另一熱門選擇</li>
+              <li>島內悠閒散步，與貓咪互動</li>
+              <li>漁港夕陽景色</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-time transport"></div>
+      <div class="transport-row">
+        <div class="transport-info">
+          <span class="transport-icon">🚌</span>
+          <span>奧武島 → 搭 54 號公車至「那霸巴士總站」→ 轉搭市內線至漫畫倉庫附近</span>
+          <span class="transport-duration">約 50 分鐘 ／ ¥590＋¥230</span>
+        </div>
+      </div>
+
+      <div class="tl-time">20:10–21:40</div>
+      <div class="tl-content">
+        <div class="spot-card" onclick="toggleCard(this)">
+          <div class="spot-card-header">
+            <div class="spot-icon">📚</div>
+            <div class="spot-title-wrap">
+              <div class="spot-name">漫畫倉庫 那霸小禄店</div>
+              <div class="spot-meta"><span>停留 2 小時</span></div>
+            </div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="spot-body">
+            <div class="spot-desc">位於那霸小禄地區的二手連鎖店，可以尋寶二手遊戲、漫畫、模型等。距赤嶺駅步行 2 分鐘，搭 Yui-Rail 可直達縣廳前站。</div>
+            <a href="https://maps.app.goo.gl/ZARbrNbDYATCAsTt6" target="_blank" class="map-btn">📍 Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-time transport"></div>
+      <div class="transport-row">
+        <div class="transport-info">
+          <span class="transport-icon">🚇</span>
+          <span>漫畫倉庫步行 2 分鐘至赤嶺駅 → 搭 Yui-Rail 至縣廳前駅</span>
+          <span class="transport-duration">約 20 分鐘 ／ ¥270</span>
+        </div>
+      </div>
+
+      <div class="tl-time">≈ 22:00</div>
+      <div class="tl-content">
+        <div style="padding: 12px 0; font-size: 13px; color: var(--light-text);">🏨 回飯店 Check-in・休息</div>
+      </div>
+    </div>
+
+    <div class="map-section">
+      <div class="map-header">🗺️ Day 1 路線 B・Google Maps 路線圖</div>
+      <div class="map-placeholder">
+        <div class="map-emoji">🗺️</div>
+        <div class="map-label">那霸機場 → 瀨長島 → 奧武島 → 漫畫倉庫 → 飯店</div>
+        <a href="https://www.google.com/maps/dir/那霸機場/瀨長島ウミカジテラス/奥武島/漫画倉庫 那覇新都心店/Toyoko+Inn+Okinawa+Naha+Asahibashi+Ekimae" target="_blank" class="map-link-btn">📍 在 Google Maps 開啟路線</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DAY 2 ===================== -->
+<section class="day-section" id="day2">
+  <div class="day-header">
+    <div class="day-number">02</div>
+    <div class="day-info">
+      <h2>古宇利島 × 美麗海水族館</h2>
+      <div class="day-date">9 月 10 日（週四）</div>
+      <div class="day-transport-badge badge-car">🚗 包車前往（強烈建議）</div>
+    </div>
+  </div>
+
+  <div class="day-summary">
+    <div class="summary-item">
+      <div class="label">🌅 出發時間</div>
+      <div class="value">飯店 08:00 出發</div>
+    </div>
+    <div class="summary-item">
+      <div class="label">📍 活動範圍</div>
+      <div class="value">沖繩北部（今歸仁・名護）</div>
+    </div>
+    <div class="summary-item">
+      <div class="label">🌙 回飯店</div>
+      <div class="value">≈ 20:30</div>
+    </div>
+    <div class="summary-item">
+      <div class="label">💡 行程總結</div>
+      <div class="value">海島風情 + 世界頂級水族館，充實滿點的一天</div>
+    </div>
+  </div>
+
+  
+  <div style="background:white;border:1px solid rgba(0,0,0,0.08);border-radius:16px;padding:20px;margin:16px 0;">
+    <div style="font-size:12px;font-weight:600;letter-spacing:2px;color:#006994;text-transform:uppercase;margin-bottom:12px;">💴 Day 2 預估費用（每人）</div>
+    
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🎟️ 沖繩美麗海水族館</span>
+        <span style="font-size:13px;font-weight:600;">¥2,180</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🎟️ 古宇利海洋塔（可選）</span>
+        <span style="font-size:13px;font-weight:600;">¥800</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🚌 回程公車（牧志→縣廳前）</span>
+        <span style="font-size:13px;font-weight:600;">¥230</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🚗 包車費用（估計12人分攤）</span>
+        <span style="font-size:13px;font-weight:600;">約¥4,000–5,000</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-radius:8px;background:#1a2744;color:white;margin:3px 0;">
+        <span style="font-size:13px;font-weight:600;">💰 小計（含包車）</span>
+        <span style="font-size:13px;font-weight:600;font-weight:600;">約¥7,210–8,210</span>
+      </div>
+    <div style="font-size:12px;color:#666;margin-top:10px;padding:8px 12px;background:#fdf8f0;border-radius:8px;">包車費用依實際租賃報價而定</div>
+  </div>
+<div class="timeline">
+    <div class="tl-time">08:00</div>
+    <div class="tl-content">
+      <div style="padding: 8px 0; font-size: 13px; color: var(--light-text);">🏨 縣廳前站集合出發</div>
+    </div>
+
+    <div class="tl-time transport"></div>
+    <div class="transport-row">
+      <div class="transport-info">
+        <span class="transport-icon">🚗</span>
+        <span>飯店 → 古宇利島（包車，走沖繩自動車道）</span>
+        <span class="transport-duration">約 1 小時 30 分鐘</span>
+      </div>
+    </div>
+
+    <div class="tl-time">09:30–12:00</div>
+    <div class="tl-content">
+      <div class="spot-card" onclick="toggleCard(this)">
+        <div class="spot-card-header">
+          <div class="spot-icon">🌊</div>
+          <div class="spot-title-wrap">
+            <div class="spot-name">古宇利島・看海 + 吃午餐</div>
+            <div class="spot-meta"><span>停留 2 小時 30 分鐘</span><span>大橋免費</span><span>沖繩最美小島之一</span></div>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="spot-body">
+          <div class="spot-photo">🏝️</div>
+          <div class="info-grid">
+            <div class="info-item"><div class="il">費用</div><div class="iv">免費（過橋免費、停車場收費）</div></div>
+            <div class="info-item"><div class="il">古宇利大橋</div><div class="iv">全長 1,960 公尺，沖繩最長跨海橋</div></div>
+            <div class="info-item"><div class="il">必去海灘</div><div class="iv">Tinu 海灘（心形礁石・IG 熱點）</div></div>
+            <div class="info-item"><div class="il">停留建議</div><div class="iv">2–3 小時</div></div>
+          </div>
+          <div class="spot-desc">古宇利島是沖繩本島北部的一座圓形小島，被稱為「戀愛之島」，沖繩神話中亞當與夏娃就起源於此。過了全長近 2 公里的古宇利大橋，眼前的碧海藍天讓人心曠神怡。島上最有名的景點是 Tinu 海灘上的愛心形礁石，每天吸引大量情侶拍照。</div>
+          <div class="rec-label">🌟 必看景點</div>
+          <ul class="highlight-list">
+            <li>古宇利大橋——開車通過，窗外是湛藍海水</li>
+            <li>Tinu 海灘（ティーヌ浜）——心形礁石打卡</li>
+            <li>古宇利海洋塔——可選付費上瞭望台（¥800）</li>
+            <li>古宇利島西海岸——清澈海水、浮潛勝地</li>
+          </ul>
+          <div class="rec-label">🍽️ 推薦午餐</div>
+          <ul class="highlight-list">
+            <li>Ocean's 古宇利島店（漢堡・海景座位）</li>
+            <li>ソラハウス（島上海景咖啡廳）</li>
+            <li>海鮮烤肉・島上小食攤</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-time transport"></div>
+    <div class="transport-row">
+      <div class="transport-info">
+        <span class="transport-icon">🚗</span>
+        <span>古宇利島 → 美麗海水族館（海洋博公園）</span>
+        <span class="transport-duration">約 30–40 分鐘</span>
+      </div>
+    </div>
+
+    <div class="tl-time">12:45–16:15</div>
+    <div class="tl-content">
+      <div class="spot-card" onclick="toggleCard(this)">
+        <div class="spot-card-header">
+          <div class="spot-icon">🐋</div>
+          <div class="spot-title-wrap">
+            <div class="spot-name">沖繩美麗海水族館</div>
+            <div class="spot-meta"><span>停留 3 小時 30 分鐘</span><span>世界級水族館</span><span>必看鯨鯊餵食 15:00</span></div>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="spot-body">
+          <div class="spot-photo">🌊</div>
+          <div class="info-grid">
+            <div class="info-item"><div class="il">門票</div><div class="iv">成人 ¥2,180 ／ 高中生 ¥1,440 ／ 中小學生 ¥710</div></div>
+            <div class="info-item"><div class="il">開放時間</div><div class="iv">08:30–18:30（最後入館 17:30）</div></div>
+            <div class="info-item"><div class="il">停留建議</div><div class="iv">3–4 小時</div></div>
+            <div class="info-item"><div class="il">省票方式</div><div class="iv">Klook / KKday 有優惠，或許田休息站 ¥2,000</div></div>
+          </div>
+          <div class="spot-desc">美麗海水族館隸屬於海洋博公園，是亞洲最大、全球頂級的水族館之一。館內以「黑潮之海」超大水槽最受矚目，容量高達 7,500 立方公尺，飼養著鯨鯊和首次人工繁殖成功的鬼蝠魟，震撼力十足。水族館外還有免費的海豚劇場表演。</div>
+          <div class="rec-label">🌟 不可錯過的表演時間</div>
+          <ul class="highlight-list">
+            <li>🐋 鯨鯊餵食秀：15:00 / 17:00（垂直站立搶食，超震撼）</li>
+            <li>🐬 海豚表演（海洋博公園，免費觀賞）</li>
+            <li>🐟 熱帶魚餵食秀：13:00 / 15:30（3F）</li>
+            <li>🦈 鬼蝠魟餵食：09:00（早場限定）</li>
+          </ul>
+          <div class="rec-label">🍽️ 館內用餐</div>
+          <ul class="highlight-list">
+            <li>Ocean Blue（黑潮之海旁，可邊看鯨鯊邊用餐）</li>
+            <li>INOH 觀景餐廳（4F，沖繩料理自助，午餐 ¥1,520）</li>
+          </ul>
+          <div class="notice">💡 建議 13:00 抵達，先看熱帶魚餵食秀，逛完展區後，15:00 守候鯨鯊餵食秀，這是全場最壯觀的一幕！</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-time transport"></div>
+    <div class="transport-row">
+      <div class="transport-info">
+        <span class="transport-icon">🚗</span>
+        <span>美麗海水族館 → 那霸・第一牧志公設市場</span>
+        <span class="transport-duration">約 1 小時 45 分鐘</span>
+      </div>
+    </div>
+
+    <div class="tl-time">18:00–20:00</div>
+    <div class="tl-content">
+      <div class="spot-card" onclick="toggleCard(this)">
+        <div class="spot-card-header">
+          <div class="spot-icon">🦐</div>
+          <div class="spot-title-wrap">
+            <div class="spot-name">第一牧志公設市場・晚餐</div>
+            <div class="spot-meta"><span>停留 1 小時 30 分–2 小時</span><span>那霸必訪市場</span></div>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="spot-body">
+          <div class="info-grid">
+            <div class="info-item"><div class="il">地址</div><div class="iv">那霸市松尾2-7-10</div></div>
+            <div class="info-item"><div class="il">開放時間</div><div class="iv">08:00–21:00（週二公休）</div></div>
+            <div class="info-item"><div class="il">特色</div><div class="iv">2F 餐廳可將1F購買海鮮帶上去烹飪</div></div>
+          </div>
+          <div class="spot-desc">那霸最具代表性的傳統市場，以販售新鮮海鮮、熱帶魚、沖繩食材聞名，外表鮮豔的魚貨讓人大開眼界。一樓買食材，二樓餐廳可以將買到的新鮮食材付少許加工費烹調成料理，是那霸必訪的美食聖地。</div>
+          <div class="rec-label">🌟 市場精選</div>
+          <ul class="highlight-list">
+            <li>購買生魚片、海鮮至 2F 加工烹調（加工費 ¥500–800）</li>
+            <li>沖繩黑豬（阿古豬）刺身</li>
+            <li>海葡萄——沖繩特產海藻，脆脆海味</li>
+            <li>琉球泡盛試飲</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-time transport"></div>
+    <div class="transport-row">
+      <div class="transport-info">
+        <span class="transport-icon">🚶</span>
+        <span>步行或搭公車回各自飯店（縣廳前站周邊，步行約 15–20 分鐘）</span>
+        <span class="transport-duration">約 20 分鐘</span>
+      </div>
+    </div>
+
+    <div class="tl-time">≈ 20:30</div>
+    <div class="tl-content">
+      <div style="padding: 12px 0; font-size: 13px; color: var(--light-text);">🏨 回飯店休息</div>
+    </div>
+  </div>
+
+  <div class="map-section">
+    <div class="map-header">🗺️ Day 2・Google Maps 路線圖</div>
+    <div class="map-placeholder">
+      <div class="map-emoji">🗺️</div>
+      <div class="map-label">飯店 → 古宇利島（Tinu 海灘）→ 美麗海水族館 → 第一牧志公設市場 → 飯店</div>
+      <a href="https://www.google.com/maps/dir/Toyoko+Inn+Naha+Asahibashi/古宇利島/沖縄美ら海水族館/第一牧志公設市場/Toyoko+Inn+Naha+Asahibashi" target="_blank" class="map-link-btn">📍 在 Google Maps 開啟路線</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DAY 3 ===================== -->
+<section class="day-section" id="day3">
+  <div class="day-header">
+    <div class="day-number">03</div>
+    <div class="day-info">
+      <h2>主題樂園 × 夕陽 × 美國村</h2>
+      <div class="day-date">9 月 11 日（週五）</div>
+      <div class="day-transport-badge badge-car">🚗 包車前往（強烈建議）</div>
+    </div>
+  </div>
+
+  <div class="day-summary">
+    <div class="summary-item">
+      <div class="label">🌅 出發時間</div>
+      <div class="value">路線A 10:00 / 路線B 10:30 出發</div>
+    </div>
+    <div class="summary-item">
+      <div class="label">📍 活動範圍</div>
+      <div class="value">沖繩中北部（名護・恩納・北谷）</div>
+    </div>
+    <div class="summary-item">
+      <div class="label">🌙 回飯店</div>
+      <div class="value">兩路線均 ≈ 22:15</div>
+    </div>
+    <div class="summary-item">
+      <div class="label">🌅 萬座毛夕陽</div>
+      <div class="value">兩路線均安排 17:30–18:10 看日落（9/11 沖繩日落 ≈ 17:40）</div>
+    </div>
+  </div>
+
+  
+  <div style="background:white;border:1px solid rgba(0,0,0,0.08);border-radius:16px;padding:20px;margin:16px 0;">
+    <div style="font-size:12px;font-weight:600;letter-spacing:2px;color:#006994;text-transform:uppercase;margin-bottom:12px;">💴 Day 3 預估費用（每人）</div>
+    <div style="font-size:11px;letter-spacing:1px;color:#4fb3d9;font-weight:600;margin:10px 0 4px;text-transform:uppercase;">路線 A</div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🎟️ JUNGLIA 一日票（境外旅客）</span>
+        <span style="font-size:13px;font-weight:600;">¥8,800</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🎟️ 萬座毛觀光設施費</span>
+        <span style="font-size:13px;font-weight:600;">¥100</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🚗 包車費用（12人分攤）</span>
+        <span style="font-size:13px;font-weight:600;">約¥4,000–5,000</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;background:#1a2744;color:white;margin:3px 0;">
+        <span style="font-size:13px;font-weight:600;">💰 路線A 小計</span>
+        <span style="font-size:13px;font-weight:600;font-weight:600;">約¥12,900–13,900</span>
+      </div><div style="font-size:11px;letter-spacing:1px;color:#4fb3d9;font-weight:600;margin:10px 0 4px;text-transform:uppercase;">路線 B</div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🎟️ 今歸仁城跡</span>
+        <span style="font-size:13px;font-weight:600;">¥600</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🎟️ Orion 工廠導覽</span>
+        <span style="font-size:13px;font-weight:600;">免費</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🎟️ 萬座毛觀光設施費</span>
+        <span style="font-size:13px;font-weight:600;">¥100</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🚗 包車費用（12人分攤）</span>
+        <span style="font-size:13px;font-weight:600;">約¥4,000–5,000</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;padding:8px 12px;border-radius:8px;background:#1a2744;color:white;margin:3px 0;">
+        <span style="font-size:13px;font-weight:600;">💰 路線B 小計</span>
+        <span style="font-size:13px;font-weight:600;font-weight:600;">約¥4,700–5,700</span>
+      </div>
+    <div style="font-size:12px;color:#666;margin-top:10px;padding:8px 12px;background:#fdf8f0;border-radius:8px;">建議提前購買 JUNGLIA 電子票（Klook/KKday）</div>
+  </div>
+<div class="route-tabs">
+    <button class="route-tab route-tab-a" onclick="switchRoute('day3','A')">路線 A・JUNGLIA 恐龍樂園</button>
+    <button class="route-tab route-tab-b inactive" onclick="switchRoute('day3','B')">路線 B・今歸仁城 + 啤酒工廠</button>
+  </div>
+
+  <!-- Route A -->
+  <div id="day3-routeA" class="route-section active">
+    <div class="timeline">
+      <div class="tl-time">10:00</div>
+      <div class="tl-content">
+        <div style="padding: 8px 0; font-size: 13px; color: var(--light-text);">🏨 縣廳前站集合出發</div>
+      </div>
+
+      <div class="tl-time transport"></div>
+      <div class="transport-row">
+        <div class="transport-info">
+          <span class="transport-icon">🚗</span>
+          <span>飯店 → JUNGLIA（名護市・今歸仁村交界）</span>
+          <span class="transport-duration">約 1 小時 20 分鐘</span>
+        </div>
+      </div>
+
+      <div class="tl-time">11:20–17:05</div>
+      <div class="tl-content">
+        <div class="spot-card" onclick="toggleCard(this)">
+          <div class="spot-card-header">
+            <div class="spot-icon">🦕</div>
+            <div class="spot-title-wrap">
+              <div class="spot-name">JUNGLIA 沖繩恐龍叢林樂園</div>
+              <div class="spot-meta"><span>停留 5 小時 45 分鐘</span><span>2025/7 新開幕</span><span>需提前購票</span></div>
+            </div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="spot-body">
+            <div class="spot-photo">🌿</div>
+            <div class="info-grid">
+              <div class="info-item"><div class="il">門票（境外旅客）</div><div class="iv">成人 ¥8,800 ／ 兒童（4–11歲）¥5,940</div></div>
+              <div class="info-item"><div class="il">SPA 票（加購）</div><div class="iv">成人 ¥3,080 ／ 兒童 ¥1,870</div></div>
+              <div class="info-item"><div class="il">開放時間</div><div class="iv">10:00–19:30（請確認官網最新資訊）</div></div>
+              <div class="info-item"><div class="il">交通</div><div class="iv">包車前往，或 JUNGLIA EXPRESS 接駁</div></div>
+            </div>
+            <div class="spot-desc">2025 年 7 月 25 日盛大開幕！JUNGLIA 是由規劃環球影城的同一公司打造，佔地 60 公頃（相當於 13 座東京巨蛋），以「叢林與恐龍」為主題，設有超過 20 種驚險遊樂設施，融合沖繩亞熱帶自然景觀，更設有世界金氏紀錄認證的無邊際泡湯池 SPA 設施。</div>
+            <div class="rec-label">🌟 必玩設施</div>
+            <ul class="highlight-list">
+              <li>🦕 恐龍探險之旅（DINOSAUR SAFARI）——與恐龍近距離互動</li>
+              <li>🎈 地平線熱氣球——俯瞰沖繩山林與海岸</li>
+              <li>🌊 叢林潑水節（SPLASH BATTLE）</li>
+              <li>🌉 天空吊橋——離地 10 公尺高空行走</li>
+              <li>🎆 夜間煙火表演（需確認是否有場次）</li>
+            </ul>
+            <div class="rec-label">🍽️ 園內餐廳</div>
+            <ul class="highlight-list">
+              <li>PANORAMA DINING——鳥巢座位俯瞰全園（建議提前預約）</li>
+              <li>WILD BANQUET——戶外燒烤，棕櫚樹環繞</li>
+              <li>FOOD CART——園內流動餐車</li>
+            </ul>
+            <div class="notice">⚠️ <strong>重要提醒：</strong>JUNGLIA 門票必須提前在官網或 Klook/KKday 購買，現場票通常售罄。豪華通行證可免排隊，12 人強烈建議加購。餐廳建議提前預約（2026/3 起全面預約制）。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-time transport"></div>
+      <div class="transport-row">
+        <div class="transport-info">
+          <span class="transport-icon">🚗</span>
+          <span>JUNGLIA → 萬座毛（包車）</span>
+          <span class="transport-duration">約 30 分鐘</span>
+        </div>
+      </div>
+
+      <div class="tl-time">17:35–18:10</div>
+      <div class="tl-content">
+        <div class="spot-card" onclick="toggleCard(this)">
+          <div class="spot-card-header">
+            <div class="spot-icon">🌅</div>
+            <div class="spot-title-wrap">
+              <div class="spot-name">萬座毛・看夕陽</div>
+              <div class="spot-meta"><span>停留 1 小時</span><span>免費（需購設施費 ¥100）</span></div>
+            </div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="spot-body">
+            <div class="info-grid">
+              <div class="info-item"><div class="il">費用</div><div class="iv">觀光設施費 ¥100（維護費）</div></div>
+              <div class="info-item"><div class="il">開放時間</div><div class="iv">日出至日落（依季節）</div></div>
+              <div class="info-item"><div class="il">9 月日落</div><div class="iv">約 18:30–19:00</div></div>
+            </div>
+            <div class="spot-desc">萬座毛是沖繩中部恩納村最著名的天然景觀，巨大的珊瑚礁岩石台地宛如一隻大象鼻，伸向湛藍的東海。站在懸崖邊，眼前是廣闊無垠的大海，日落時分的橙金色光芒映照在岩石與海浪上，是沖繩數一數二的夕陽勝地。</div>
+            <div class="rec-label">🌟 打卡重點</div>
+            <ul class="highlight-list">
+              <li>象鼻岩地形——珊瑚礁天然雕刻奇景</li>
+              <li>日落時分的橙金色海景</li>
+              <li>新設觀光休息設施（2022 年改建）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-time transport"></div>
+      <div class="transport-row">
+        <div class="transport-info">
+          <span class="transport-icon">🚗</span>
+          <span>萬座毛 → 美國村・北谷</span>
+          <span class="transport-duration">約 20 分鐘</span>
+        </div>
+      </div>
+
+      <div class="tl-time">18:30–21:30</div>
+      <div class="tl-content">
+        <div class="spot-card" onclick="toggleCard(this)">
+          <div class="spot-card-header">
+            <div class="spot-icon">🇺🇸</div>
+            <div class="spot-title-wrap">
+              <div class="spot-name">美國村・逛街 + 晚餐</div>
+              <div class="spot-meta"><span>停留 3 小時</span><span>免費入場</span><span>沖繩最潮打卡地</span></div>
+            </div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="spot-body">
+            <div class="spot-photo">🎡</div>
+            <div class="info-grid">
+              <div class="info-item"><div class="il">費用</div><div class="iv">免費逛街（餐飲自費）</div></div>
+              <div class="info-item"><div class="il">範圍</div><div class="iv">北谷美浜地區，步行可逛完</div></div>
+              <div class="info-item"><div class="il">特色</div><div class="iv">摩天輪・海景夕陽・美式購物</div></div>
+            </div>
+            <div class="spot-desc">美國村又稱 American Village，是沖繩最受歡迎的觀光商業區，融合美式文化與沖繩風情，有著各式特色商店、餐廳、咖啡廳，以及地標性的摩天輪。日落後燈光點亮，整個美國村變得夢幻迷人，是情侶和年輕人的聚集地。</div>
+            <div class="rec-label">🌟 逛街必訪</div>
+            <ul class="highlight-list">
+              <li>Depot Island——集結多品牌商場</li>
+              <li>美浜海邊走廊——面海的露天餐飲街</li>
+              <li>夜晚摩天輪（搭乘 ¥500）</li>
+              <li>Blue Seal 冰淇淋、Helios Pub 沖繩啤酒</li>
+            </ul>
+            <div class="rec-label">🍽️ 晚餐推薦</div>
+            <ul class="highlight-list">
+              <li>牛排屋 88 北谷店——沖繩和牛牛排 + 冰淇淋吃到飽</li>
+              <li>Helios Pub Chatan——沖繩精釀啤酒配海景</li>
+              <li>Yoshihachi 好八——日式居酒屋，性價比高</li>
+              <li>Kouri Shrimp——蒜香蝦，必吃美食</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-time transport"></div>
+      <div class="transport-row">
+        <div class="transport-info">
+          <span class="transport-icon">🚗</span>
+          <span>美國村 → 飯店（包車）</span>
+          <span class="transport-duration">約 35–45 分鐘</span>
+        </div>
+      </div>
+
+      <div class="tl-time">≈ 22:15</div>
+      <div class="tl-content">
+        <div style="padding: 12px 0; font-size: 13px; color: var(--light-text);">🏨 回飯店休息</div>
+      </div>
+    </div>
+
+    <div class="map-section">
+      <div class="map-header">🗺️ Day 3 路線 A・Google Maps 路線圖</div>
+      <div class="map-placeholder">
+        <div class="map-emoji">🗺️</div>
+        <div class="map-label">飯店 → JUNGLIA → 萬座毛 → 美國村 → 飯店</div>
+        <a href="https://www.google.com/maps/dir/Toyoko+Inn+Naha+Asahibashi/JUNGLIA+Okinawa/万座毛/美国村+北谷/Toyoko+Inn+Naha+Asahibashi" target="_blank" class="map-link-btn">📍 在 Google Maps 開啟路線</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Route B -->
+  <div id="day3-routeB" class="route-section">
+    <div class="timeline">
+      <div class="tl-time">10:30</div>
+      <div class="tl-content"><div style="padding: 8px 0; font-size: 13px; color: var(--light-text);">🏨 縣廳前站集合出發</div></div>
+
+      <div class="tl-time transport"></div>
+      <div class="transport-row">
+        <div class="transport-info">
+          <span class="transport-icon">🚗</span>
+          <span>縣廳前站 → 名護市區</span>
+          <span class="transport-duration">約 1 小時 30 分鐘</span>
+        </div>
+      </div>
+
+      <div class="tl-time">12:00–13:00</div>
+      <div class="tl-content">
+        <div class="spot-card" onclick="toggleCard(this)">
+          <div class="spot-card-header">
+            <div class="spot-icon">🍜</div>
+            <div class="spot-title-wrap">
+              <div class="spot-name">名護市區・午餐</div>
+              <div class="spot-meta"><span>停留 1 小時</span><span>沖繩北部名店</span></div>
+            </div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="spot-body">
+            <div class="rec-label">🍽️ 推薦餐廳</div>
+            <ul class="highlight-list">
+              <li>幸ちゃんそば——名護人氣沖繩麵，在地食堂氛圍</li>
+              <li>あぐー家 名護本店——阿古豬料理專門店</li>
+              <li>MEGA 唐吉訶德名護店旁美食——快速解決午餐</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-time transport"></div>
+      <div class="transport-row">
+        <div class="transport-info">
+          <span class="transport-icon">🚗</span>
+          <span>名護 → 今歸仁城跡</span>
+          <span class="transport-duration">約 25 分鐘</span>
+        </div>
+      </div>
+
+      <div class="tl-time">13:25–14:55</div>
+      <div class="tl-content">
+        <div class="spot-card" onclick="toggleCard(this)">
+          <div class="spot-card-header">
+            <div class="spot-icon">🏰</div>
+            <div class="spot-title-wrap">
+              <div class="spot-name">今歸仁城跡</div>
+              <div class="spot-meta"><span>停留 1 小時 30 分鐘</span><span>世界文化遺產</span></div>
+            </div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="spot-body">
+            <div class="info-grid">
+              <div class="info-item"><div class="il">門票</div><div class="iv">成人 ¥600 ／ 中小學生 ¥300</div></div>
+              <div class="info-item"><div class="il">開放時間</div><div class="iv">08:00–18:00（5–8月至19:00）</div></div>
+              <div class="info-item"><div class="il">列為</div><div class="iv">UNESCO 世界文化遺產</div></div>
+            </div>
+            <div class="spot-desc">今歸仁城是琉球王國統一前北山王的居城，雄偉的石牆城廓依山勢而建，視野遼闊可遠眺大海。這裡是沖繩世界遺產之一，與首里城並列為沖繩必訪城跡。春天還會盛開著琉球緋寒櫻，被稱為「沖繩最早的賞櫻地」。</div>
+            <div class="rec-label">🌟 必看景點</div>
+            <ul class="highlight-list">
+              <li>外城・第二城門——壯觀的石牆城廓</li>
+              <li>主郭（本丸）——最高處眺望東海</li>
+              <li>歷史文化中心——城跡歷史展示</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-time transport"></div>
+      <div class="transport-row">
+        <div class="transport-info">
+          <span class="transport-icon">🚗</span>
+          <span>今歸仁城跡 → Orion 啤酒名護工廠</span>
+          <span class="transport-duration">約 30 分鐘</span>
+        </div>
+      </div>
+
+      <div class="tl-time">15:25–16:55</div>
+      <div class="tl-content">
+        <div class="spot-card" onclick="toggleCard(this)">
+          <div class="spot-card-header">
+            <div class="spot-icon">🍺</div>
+            <div class="spot-title-wrap">
+              <div class="spot-name">Orion ハッピーパーク・啤酒工廠</div>
+              <div class="spot-meta"><span>停留 1 小時 30 分鐘</span><span>需預約</span></div>
+            </div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="spot-body">
+            <div class="info-grid">
+              <div class="info-item"><div class="il">費用</div><div class="iv">免費（需預約）</div></div>
+              <div class="info-item"><div class="il">開放時間</div><div class="iv">09:00–18:00（週六日公休）</div></div>
+              <div class="info-item"><div class="il">特色</div><div class="iv">免費試飲兩杯 Orion 生啤酒</div></div>
+            </div>
+            <div class="spot-desc">Orion 啤酒是沖繩最代表性的品牌，在名護工廠可以參加免費導覽了解啤酒製程，結束後提供兩杯免費生啤試飲！現場也有紀念品販賣，可以買到工廠限定商品。⚠️ 注意：Orion 工廠週六日休館，9/11 是週五，可以前往。</div>
+            <div class="rec-label">🌟 體驗內容</div>
+            <ul class="highlight-list">
+              <li>工廠參觀導覽（約 50 分鐘）</li>
+              <li>免費生啤試飲（2 杯，20 歲以上）</li>
+              <li>限定紀念品購買</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-time transport"></div>
+      <div class="transport-row">
+        <div class="transport-info">
+          <span class="transport-icon">🚗</span>
+          <span>Orion 工廠 → 萬座毛</span>
+          <span class="transport-duration">約 35 分鐘</span>
+        </div>
+      </div>
+
+      <div class="tl-time">17:30–18:10</div>
+      <div class="tl-content">
+        <div class="spot-card" onclick="toggleCard(this)">
+          <div class="spot-card-header">
+            <div class="spot-icon">🌅</div>
+            <div class="spot-title-wrap">
+              <div class="spot-name">萬座毛・看夕陽</div>
+              <div class="spot-meta"><span>停留 40 分鐘</span><span>象鼻岩奇景・夕陽 17:40–18:10</span></div>
+            </div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="spot-body">
+            <div class="spot-desc">萬座毛巨大珊瑚礁岩台地，象鼻形地貌伸入東海，是沖繩最著名的自然景觀之一。傍晚時分的夕陽色調美不勝收。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-time transport"></div>
+      <div class="transport-row">
+        <div class="transport-info">
+          <span class="transport-icon">🚗</span>
+          <span>萬座毛 → 美國村</span>
+          <span class="transport-duration">約 20 分鐘</span>
+        </div>
+      </div>
+
+      <div class="tl-time">18:30–21:30</div>
+      <div class="tl-content">
+        <div class="spot-card" onclick="toggleCard(this)">
+          <div class="spot-card-header">
+            <div class="spot-icon">🇺🇸</div>
+            <div class="spot-title-wrap">
+              <div class="spot-name">美國村・逛街 + 晚餐</div>
+              <div class="spot-meta"><span>停留 3 小時</span></div>
+            </div>
+            <div class="chevron">▼</div>
+          </div>
+          <div class="spot-body">
+            <div class="spot-desc">美式風格商業區，逛街購物、享用晚餐，夜晚燈光迷人，是沖繩中部必訪景點。詳細資訊同路線 A。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-time transport"></div>
+      <div class="transport-row">
+        <div class="transport-info">
+          <span class="transport-icon">🚗</span>
+          <span>美國村 → 飯店</span>
+          <span class="transport-duration">約 35–45 分鐘</span>
+        </div>
+      </div>
+
+      <div class="tl-time">≈ 22:15</div>
+      <div class="tl-content">
+        <div style="padding: 12px 0; font-size: 13px; color: var(--light-text);">🏨 回飯店休息</div>
+      </div>
+    </div>
+
+    <div class="map-section">
+      <div class="map-header">🗺️ Day 3 路線 B・Google Maps 路線圖</div>
+      <div class="map-placeholder">
+        <div class="map-emoji">🗺️</div>
+        <div class="map-label">飯店 → 今歸仁城跡 → Orion 工廠 → 萬座毛 → 美國村 → 飯店</div>
+        <a href="https://www.google.com/maps/dir/Toyoko+Inn+Naha+Asahibashi/今帰仁城跡/オリオンハッピーパーク/万座毛/美国村+北谷/Toyoko+Inn+Naha+Asahibashi" target="_blank" class="map-link-btn">📍 在 Google Maps 開啟路線</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DAY 4 ===================== -->
+<section class="day-section" id="day4">
+  <div class="day-header">
+    <div class="day-number">04</div>
+    <div class="day-info">
+      <h2>文青街區 × 寶可夢購物 × 夜間動物園</h2>
+      <div class="day-date">9 月 12 日（週六）</div>
+      <div class="day-transport-badge badge-car">🚗 包車前往（強烈建議）</div>
+    </div>
+  </div>
+
+  <div class="day-summary">
+    <div class="summary-item">
+      <div class="label">🌅 出發時間</div>
+      <div class="value">飯店 10:30 出發</div>
+    </div>
+    <div class="summary-item">
+      <div class="label">📍 路線方向</div>
+      <div class="value">那霸 → 浦添 → 北中城 → 沖繩市</div>
+    </div>
+    <div class="summary-item">
+      <div class="label">🌙 回飯店</div>
+      <div class="value">≈ 20:50</div>
+    </div>
+    <div class="summary-item">
+      <div class="label">🦁 夜間動物園</div>
+      <div class="value">週六開放至 21:00（最晚入場 20:00）</div>
+    </div>
+  </div>
+
+  
+  <div style="background:white;border:1px solid rgba(0,0,0,0.08);border-radius:16px;padding:20px;margin:16px 0;">
+    <div style="font-size:12px;font-weight:600;letter-spacing:2px;color:#006994;text-transform:uppercase;margin-bottom:12px;">💴 Day 4 預估費用（每人）</div>
+    
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🎟️ 沖繩兒童王國（16歲以上）</span>
+        <span style="font-size:13px;font-weight:600;">¥1,000</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🚗 包車費用（估計12人分攤）</span>
+        <span style="font-size:13px;font-weight:600;">約¥4,000–5,000</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-radius:8px;background:#1a2744;color:white;margin:3px 0;">
+        <span style="font-size:13px;font-weight:600;">💰 小計（含包車）</span>
+        <span style="font-size:13px;font-weight:600;font-weight:600;">約¥5,000–6,000</span>
+      </div>
+    <div style="font-size:12px;color:#666;margin-top:10px;padding:8px 12px;background:#fdf8f0;border-radius:8px;">15歲以下兒童王國免費</div>
+  </div>
+<div class="notice">💡 <strong>9/12 是週六</strong>，沖繩兒童王國夜間動物園開放，這是平日無法體驗的特別活動！路線由南往北依序前進：飯店 → 港川外人住宅 → 永旺來客夢・寶可夢中心 → 沖繩兒童王國。</div>
+
+  <div class="timeline">
+    <div class="tl-time">10:30</div>
+    <div class="tl-content">
+      <div style="padding: 8px 0; font-size: 13px; color: var(--light-text);">🏨 縣廳前站集合出發</div>
+    </div>
+
+    <div class="tl-time transport"></div>
+    <div class="transport-row">
+      <div class="transport-info">
+        <span class="transport-icon">🚗</span>
+        <span>飯店（那霸）→ 港川外人住宅（浦添）</span>
+        <span class="transport-duration">約 15 分鐘</span>
+      </div>
+    </div>
+
+    <div class="tl-time">10:45–13:30</div>
+    <div class="tl-content">
+      <div class="spot-card" onclick="toggleCard(this)">
+        <div class="spot-card-header">
+          <div class="spot-icon">☕</div>
+          <div class="spot-title-wrap">
+            <div class="spot-name">港川外人住宅街・早午餐 + 文青散策</div>
+            <div class="spot-meta"><span>停留 2 小時 45 分鐘</span><span>沖繩最文青打卡地</span><span>浦添市</span></div>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="spot-body">
+          <div class="spot-photo">🏡</div>
+          <div class="info-grid">
+            <div class="info-item"><div class="il">費用</div><div class="iv">免費（餐飲自費）</div></div>
+            <div class="info-item"><div class="il">地址</div><div class="iv">浦添市港川外人住宅街</div></div>
+            <div class="info-item"><div class="il">風格</div><div class="iv">美式平房改造，文青小店聚落</div></div>
+            <div class="info-item"><div class="il">建議時段</div><div class="iv">上午人潮少，拍照最優</div></div>
+          </div>
+          <div class="spot-desc">港川外人住宅是沖繩最有特色的街道之一，原本是戰後美軍家眷的住宅區，現在改建成各式特色咖啡廳、雜貨店、烘培店、服飾店的文青聚落。建築物保留了 50 年代美式平房的外觀，色彩繽紛的外牆與盆栽小徑走進每一間小店都有意外驚喜，是沖繩最適合拍 IG 的地方。上午到訪人潮最少，也可在此解決早午餐。</div>
+          <div class="rec-label">🌟 必訪店家</div>
+          <ul class="highlight-list">
+            <li>ippe coppe——天然酵母麵包（建議早到，容易售罄）</li>
+            <li>Zhyvago Coffee Works——頂級精品咖啡，文青必打卡</li>
+            <li>OKINAWA CERRADO COFFEE ROASTERS——在地烘焙豆咖啡</li>
+            <li>SHE OKINAWA——雜貨 &amp; 生活選物</li>
+          </ul>
+          <div class="rec-label">🍽️ 早午餐選擇</div>
+          <ul class="highlight-list">
+            <li>café ichara——沖繩早午餐，木質空間</li>
+            <li>Zhyvago Coffee Works——咖啡 + 輕食</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-time transport"></div>
+    <div class="transport-row">
+      <div class="transport-info">
+        <span class="transport-icon">🚗</span>
+        <span>港川外人住宅（浦添）→ 永旺夢樂城沖繩來客夢（北中城）</span>
+        <span class="transport-duration">約 15 分鐘</span>
+      </div>
+    </div>
+
+    <div class="tl-time">13:45–15:45</div>
+    <div class="tl-content">
+      <div class="spot-card" onclick="toggleCard(this)">
+        <div class="spot-card-header">
+          <div class="spot-icon">🛍️</div>
+          <div class="spot-title-wrap">
+            <div class="spot-name">永旺夢樂城沖繩來客夢 × 寶可夢中心 + 午餐</div>
+            <div class="spot-meta"><span>停留 2 小時</span><span>寶可夢中心在此！</span><span>北中城村</span></div>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="spot-body">
+          <div class="info-grid">
+            <div class="info-item"><div class="il">開放時間</div><div class="iv">10:00–22:00（餐飲至 23:00）</div></div>
+            <div class="info-item"><div class="il">費用</div><div class="iv">免費入場（購物自費）</div></div>
+            <div class="info-item"><div class="il">地址</div><div class="iv">北中城村字ライカム1番地</div></div>
+            <div class="info-item"><div class="il">外國人優惠</div><div class="iv">服務台換取滿 ¥5,000 折 ¥500 券（出示護照）</div></div>
+          </div>
+          <div class="spot-desc">沖繩最大購物商場，集合超過 240 間店鋪。最大亮點是 2022 年開幕的<strong>寶可夢中心沖繩店</strong>，門口風速狗超吸睛，琳瑯滿目寶可夢商品讓人失心瘋。館內免稅服務完善，外國旅客購物滿 ¥5,000 可退稅，是採購伴手禮的最強基地。</div>
+          <div class="rec-label">🎮 寶可夢中心 沖繩店</div>
+          <ul class="highlight-list">
+            <li>風速狗等身大公仔——必拍打卡！</li>
+            <li>沖繩限定寶可夢商品（海洋系、沖繩風獅爺聯名等）</li>
+            <li>寶可夢卡牌、布偶、文具、食玩周邊</li>
+          </ul>
+          <div class="rec-label">🌟 其他必逛</div>
+          <ul class="highlight-list">
+            <li>KOJIMA × BIC CAMERA 藥妝電器——品項最齊全，外國人 85 折</li>
+            <li>三麗鷗商店 / 橡子共和國（龍貓）——動漫迷必逛</li>
+            <li>LOFT / GU / UNIQLO——日系雜貨服飾</li>
+            <li>AEON STYLE 超市——沖繩限定零食、泡盛伴手禮</li>
+          </ul>
+          <div class="rec-label">🍽️ 午餐選擇</div>
+          <ul class="highlight-list">
+            <li>3–4F 美食街——超過 60 間，沖繩料理、拉麵、壽司任選</li>
+            <li>琉球新麵通堂——沖繩人氣拉麵</li>
+            <li>敘敘苑燒肉——5F 無敵海景（建議提前訂位）</li>
+          </ul>
+          <div class="notice">💡 進場先到 1F 旅遊服務中心出示護照換取 ¥500 購物券！重物可寄置物櫃，逛完再前往兒童王國。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-time transport"></div>
+    <div class="transport-row">
+      <div class="transport-info">
+        <span class="transport-icon">🚗</span>
+        <span>永旺夢樂城（北中城）→ 沖繩兒童王國（沖繩市）</span>
+        <span class="transport-duration">約 15–20 分鐘</span>
+      </div>
+    </div>
+
+    <div class="tl-time">16:05–20:05</div>
+    <div class="tl-content">
+      <div class="spot-card" onclick="toggleCard(this)">
+        <div class="spot-card-header">
+          <div class="spot-icon">🦁</div>
+          <div class="spot-title-wrap">
+            <div class="spot-name">沖繩兒童王國・白天 + 夜間動物園</div>
+            <div class="spot-meta"><span>停留 4 小時</span><span>週六開放至 21:00</span><span>夜間限定</span></div>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="spot-body">
+          <div class="spot-photo">🌙</div>
+          <div class="info-grid">
+            <div class="info-item"><div class="il">門票</div><div class="iv">16歲以上 ¥1,000 ／ 15歲以下免費</div></div>
+            <div class="info-item"><div class="il">週六・國定假日</div><div class="iv">09:30–21:00（最晚入場 20:00）</div></div>
+            <div class="info-item"><div class="il">平日</div><div class="iv">09:30–17:30（最晚入場 16:30）</div></div>
+            <div class="info-item"><div class="il">公休日</div><div class="iv">週二</div></div>
+          </div>
+          <div class="spot-desc">沖繩兒童王國是日本最南端的複合式主題動物園，擁有超過 150 種、1,000 隻動物。週末限定夜間動物園讓遊客在入夜後觀察夜行性動物的真實樣貌，搭配園區夢幻點燈，氛圍完全不同於白天。一票入場從傍晚玩到 21:00，超高 CP 值！</div>
+          <div class="rec-label">🌟 必玩體驗</div>
+          <ul class="highlight-list">
+            <li>🦊 夜行性動物觀察——日本狐狸、黑熊、捷豹入夜後更活躍</li>
+            <li>🦁 獅子・馬的餵食體驗（夜間限定場次）</li>
+            <li>🔬 神奇博物館（免費入場，科學互動裝置，3 層樓）</li>
+            <li>💡 園區夜間點燈步道——超夢幻打卡</li>
+            <li>🎠 遊樂園區——旋轉木馬・小火車各 ¥200</li>
+          </ul>
+          <div class="rec-label">🍽️ 園內晚餐 / 宵夜</div>
+          <ul class="highlight-list">
+            <li>Welcome 飲食店——章魚燒、沖繩麵、Blue Seal 冰淇淋</li>
+            <li>各園內餐車——輕食點心，邊走邊吃</li>
+          </ul>
+          <div class="notice">💡 建議 16:00 左右入場，先逛動物園（動物 17:00 後陸續下班），18:00 後夜間點燈亮起氛圍大變身。停留 4 小時，記得帶防蚊液。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-time transport"></div>
+    <div class="transport-row">
+      <div class="transport-info">
+        <span class="transport-icon">🚗</span>
+        <span>沖繩兒童王國（沖繩市）→ 縣廳前站（包車）</span>
+        <span class="transport-duration">約 40–45 分鐘</span>
+      </div>
+    </div>
+
+    <div class="tl-time">≈ 20:50</div>
+    <div class="tl-content">
+      <div style="padding: 12px 0; font-size: 13px; color: var(--light-text);">🏨 回飯店休息・前台辦理明日行李寄送機場</div>
+    </div>
+  </div>
+
+  <div class="map-section">
+    <div class="map-header">🗺️ Day 4・Google Maps 路線圖</div>
+    <div class="map-placeholder">
+      <div class="map-emoji">🗺️</div>
+      <div class="map-label">飯店 → 港川外人住宅 → 永旺來客夢・寶可夢中心 → 沖繩兒童王國 → 飯店</div>
+      <a href="https://www.google.com/maps/dir/Toyoko+Inn+Naha+Asahibashi/港川外人住宅+浦添市/イオンモール沖縄ライカム/沖縄こどもの国/Toyoko+Inn+Naha+Asahibashi" target="_blank" class="map-link-btn">📍 在 Google Maps 開啟路線</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DAY 5 ===================== -->
+<section class="day-section" id="day5">
+  <div class="day-header">
+    <div class="day-number">05</div>
+    <div class="day-info">
+      <h2>首里城 × 波上宮 × 機場返台</h2>
+      <div class="day-date">9 月 13 日（週日）</div>
+      <div class="day-transport-badge badge-transit">🚌 大眾交通工具</div>
+    </div>
+  </div>
+
+  <div class="day-summary">
+    <div class="summary-item">
+      <div class="label">😴 睡晚一點</div>
+      <div class="value">飯店 11:00 出發</div>
+    </div>
+    <div class="summary-item">
+      <div class="label">🧳 行李</div>
+      <div class="value">飯店寄送機場服務，無需回飯店取行李</div>
+    </div>
+    <div class="summary-item">
+      <div class="label">✈️ 分批抵達機場</div>
+      <div class="value">BC594 最早 14:20 抵達・其餘 15:30–16:00</div>
+    </div>
+    <div class="summary-item">
+      <div class="label">📝 注意</div>
+      <div class="value">BC594（16:20）需 13:30 先離開・其餘波上宮後直接前往機場</div>
+    </div>
+  </div>
+
+  
+  <div style="background:white;border:1px solid rgba(0,0,0,0.08);border-radius:16px;padding:20px;margin:16px 0;">
+    <div style="font-size:12px;font-weight:600;letter-spacing:2px;color:#006994;text-transform:uppercase;margin-bottom:12px;">💴 Day 5 預估費用（每人）</div>
+    
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🎟️ 首里城（收費區）</span>
+        <span style="font-size:13px;font-weight:600;">¥400</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🎟️ 波上宮</span>
+        <span style="font-size:13px;font-weight:600;">免費</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🚌 縣廳前→首里城（7/8號公車）</span>
+        <span style="font-size:13px;font-weight:600;">¥150</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🚌 首里城→波上宮（1/14號公車）</span>
+        <span style="font-size:13px;font-weight:600;">¥230</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-radius:8px;margin:3px 0;">
+        <span style="font-size:13px;">🚌 波上宮→那霸機場（99號公車）</span>
+        <span style="font-size:13px;font-weight:600;">¥230</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-radius:8px;background:#1a2744;color:white;margin:3px 0;">
+        <span style="font-size:13px;font-weight:600;">💰 小計（門票＋交通）</span>
+        <span style="font-size:13px;font-weight:600;font-weight:600;">¥1,010</span>
+      </div>
+    <div style="font-size:12px;color:#666;margin-top:10px;padding:8px 12px;background:#fdf8f0;border-radius:8px;">單軌電車1日券(¥1,000)不划算，此日建議購買單程票</div>
+  </div>
+<div class="notice">💡 <strong>行李寄送服務：</strong>Toyoko Inn 提供行李寄送至那霸機場服務，前一天晚上辦理即可，讓最後一天輕鬆出行不累贅。請提前向飯店前台確認。</div>
+
+  <div class="timeline">
+    <div class="tl-time">11:00</div>
+    <div class="tl-content">
+      <div style="padding: 8px 0; font-size: 13px; color: var(--light-text);">🏨 縣廳前站集合出發（行李已寄送機場）</div>
+    </div>
+
+    <div class="tl-time transport"></div>
+    <div class="transport-row">
+      <div class="transport-info">
+        <span class="transport-icon">🚌</span>
+        <span>縣廳前北口 → 搭 7/8 號公車（首里城下町線）至「首里城前」站</span>
+        <span class="transport-duration">約 20 分鐘 ／ ¥150</span>
+      </div>
+    </div>
+
+
+    <div class="tl-time">11:50–13:20</div>
+    <div class="tl-content">
+      <div class="spot-card" onclick="toggleCard(this)">
+        <div class="spot-card-header">
+          <div class="spot-icon">🏯</div>
+          <div class="spot-title-wrap">
+            <div class="spot-name">首里城公園</div>
+            <div class="spot-meta"><span>停留 1 小時 30 分鐘</span><span>世界文化遺產</span><span>2026年預計完工</span></div>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="spot-body">
+          <div class="spot-photo">🏯</div>
+          <div class="info-grid">
+            <div class="info-item"><div class="il">門票（付費區）</div><div class="iv">成人 ¥400 ／ 高中生 ¥300 ／ 中小學生 ¥160</div></div>
+            <div class="info-item"><div class="il">免費區域</div><div class="iv">守禮門、歡會門、瑞泉門等</div></div>
+            <div class="info-item"><div class="il">開放時間</div><div class="iv">收費區 09:00–17:30（最後入場 17:00）</div></div>
+            <div class="info-item"><div class="il">交通</div><div class="iv">縣廳前北口搭 7/8 號公車至「首里城前」站，步行 1 分鐘</div></div>
+          </div>
+          <div class="spot-desc">首里城是琉球王國長達 450 年的政治、文化中心，朱紅色城牆融合中國與日本建築風格，是沖繩最具代表性的歷史地標。2019 年大火燒毀正殿等建築，目前重建工程進行中，預計 2026 年完成正殿重建，到訪時正好可以見證歷史重建的過程。</div>
+          <div class="rec-label">🌟 必看景點</div>
+          <ul class="highlight-list">
+            <li>守禮門——首里城標誌性入口（免費區）</li>
+            <li>奉神門——收費區入口，進入歷史核心</li>
+            <li>臨時屋頂參觀區——近距離見證正殿重建工程</li>
+            <li>西台展望台——俯瞰那霸市區與港口</li>
+            <li>08:25 御開門式（每日早晨傳統儀式，需早到）</li>
+          </ul>
+          <div class="notice">💡 2026 年正殿重建即將完工，此行可以欣賞重建過程展示，是難得的歷史見學體驗！</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-time transport"></div>
+    <div class="transport-row">
+      <div class="transport-info">
+        <span class="transport-icon">🚌</span>
+        <span>首里城公園入口 → 搭 1/14 號公車至「波之上宮前」站</span>
+        <span class="transport-duration">約 25 分鐘 ／ ¥230</span>
+      </div>
+    </div>
+
+    <div class="tl-time">13:45–15:15</div>
+    <div class="tl-content">
+      <div class="spot-card" onclick="toggleCard(this)">
+        <div class="spot-card-header">
+          <div class="spot-icon">⛩️</div>
+          <div class="spot-title-wrap">
+            <div class="spot-name">波上宮 + 波之上海灘 + 午餐</div>
+            <div class="spot-meta"><span>停留 1 小時 30 分鐘</span><span>琉球八社第一</span></div>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="spot-body">
+          <div class="spot-photo">⛩️</div>
+          <div class="info-grid">
+            <div class="info-item"><div class="il">費用</div><div class="iv">免費參拜</div></div>
+            <div class="info-item"><div class="il">特色</div><div class="iv">懸崖上的神社・望海景</div></div>
+            <div class="info-item"><div class="il">海灘</div><div class="iv">波之上海灘（市區唯一海灘，夏季開放游泳）</div></div>
+          </div>
+          <div class="spot-desc">波上宮是琉球八社中位階最高的神社，建於那霸市區的珊瑚礁斷崖之上，可以眺望那霸港與海景，畫面如同浮世繪般夢幻。旁邊的波之上海灘是那霸市區唯一能游泳的海灘，沙灘潔白，9 月天氣仍炎熱，可以踏浪玩水。</div>
+          <div class="rec-label">🌟 必做體驗</div>
+          <ul class="highlight-list">
+            <li>波上宮祈願——健康、考運、旅途平安</li>
+            <li>特色御守——紅型染御守（沖繩特色）</li>
+            <li>波之上海灘——踏浪、拍照、眺望那霸港</li>
+          </ul>
+          <div class="rec-label">🍽️ 午餐推薦</div>
+          <ul class="highlight-list">
+            <li>波上宮周邊海鮮餐廳——泊港魚市場旁</li>
+            <li>HELIOS BREWPUB NAHA PORT——海景精釀啤酒</li>
+            <li>泊港魚市場——生魚片蓋飯，新鮮便宜</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="notice">⚠️ <strong>注意：天馬航空 BC594（那霸→神戶）16:20 起飛</strong>，需最晚 14:20 到機場辦理登機。若有人搭 BC594，首里城行程結束後則需提前前往機場。其餘航班（VZ569 18:20 / JX313 20:10 / IT289 21:40）可繼續前往波上宮，玩到 15:30–16:00 再出發。</div>
+
+  <div class="timeline">
+    <div class="tl-time transport"></div>
+    <div class="transport-row">
+      <div class="transport-info">
+        <span class="transport-icon">🚌</span>
+        <span>若狹一丁目 → 搭 99 號公車至「那霸機場」站</span>
+        <span class="transport-duration">約 20 分鐘 ／ ¥230</span>
+      </div>
+    </div>
+
+    <div class="tl-time">14:20 / 16:00 ↑</div>
+    <div class="tl-content">
+      <div class="spot-card" onclick="toggleCard(this)">
+        <div class="spot-card-header">
+          <div class="spot-icon">🛍️</div>
+          <div class="spot-title-wrap">
+            <div class="spot-name">那霸機場・取行李 + 逛免稅店 + 分批登機</div>
+            <div class="spot-meta"><span>行李已由飯店寄送到位</span><span>依航班時間分批離開</span></div>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="spot-body">
+          <div class="info-grid">
+            <div class="info-item"><div class="il">行李</div><div class="iv">Toyoko Inn 寄送，抵達後在指定處領取</div></div>
+            <div class="info-item"><div class="il">天馬 BC594</div><div class="iv">那霸 16:20 → 神戶 18:20（14:20 前到機場）</div></div>
+            <div class="info-item"><div class="il">泰越捷 VZ569</div><div class="iv">那霸 18:20 → 桃園 18:55（16:20 前到機場）</div></div>
+            <div class="info-item"><div class="il">星宇 JX313</div><div class="iv">那霸 20:10 → 台中 20:50（18:10 前到機場）</div></div>
+            <div class="info-item"><div class="il">虎航 IT289</div><div class="iv">那霸 21:40 → 高雄 22:30（19:40 前到機場）</div></div>
+            <div class="info-item"><div class="il">必買</div><div class="iv">ちんすこう・泡盛・雪鹽・海葡萄乾貨</div></div>
+          </div>
+          <div class="spot-desc">到機場先取行李，再盡情做最後購物！那霸機場有豐富的沖繩伴手禮，包含各式名產、泡盛、ちんすこう（金楚糕）、雪鹽餅乾等。依各自航班時間分批登機，各奔前程！</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-section">
+    <div class="map-header">🗺️ Day 5・Google Maps 路線圖</div>
+    <div class="map-placeholder">
+      <div class="map-emoji">🗺️</div>
+      <div class="map-label">飯店（出發）→ 首里城 → 波上宮・波之上海灘 → 那霸機場</div>
+      <a href="https://www.google.com/maps/dir/Toyoko+Inn+Naha+Asahibashi/首里城公園/波上宮/那霸機場" target="_blank" class="map-link-btn">📍 在 Google Maps 開啟路線</a>
+    </div>
+  </div>
+</section>
+
+</div><!-- /container -->
+
+<footer>
+  <div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 18px; color: rgba(255,255,255,0.6); margin-bottom: 12px;">沖繩 · Okinawa 2026</div>
+  <div>行程規劃僅供參考，實際票價與開放時間請以各景點官網為準 · 12 人同行建議提前預訂 JUNGLIA 門票</div>
+  <div style="margin-top: 8px; color: rgba(255,255,255,0.3);">住宿：Toyoko Inn Asahibashi Ekimae 及另一住宿 · 統一集合縣廳前站 · 9/9–9/13</div>
+</footer>
+
+<script>
+// Toggle spot cards
+function toggleCard(card) {
+  card.classList.toggle('open');
+}
+
+// Switch routes
+function switchRoute(day, route) {
+  const routeA = document.getElementById(day + '-routeA');
+  const routeB = document.getElementById(day + '-routeB');
+  const section = document.getElementById(day);
+  const tabs = section.querySelectorAll('.route-tab');
+
+  if (route === 'A') {
+    if(routeA) routeA.classList.add('active');
+    if(routeB) routeB.classList.remove('active');
+    tabs[0].classList.remove('inactive');
+    tabs[1].classList.add('inactive');
+  } else {
+    if(routeA) routeA.classList.remove('active');
+    if(routeB) routeB.classList.add('active');
+    tabs[0].classList.add('inactive');
+    tabs[1].classList.remove('inactive');
+  }
+}
+
+// Nav active state on scroll
+const dayNav = document.getElementById('dayNav');
+const navLinks = dayNav.querySelectorAll('a');
+const sections = document.querySelectorAll('.day-section');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, { threshold: 0.2 });
+
+sections.forEach(section => observer.observe(section));
+
+// Smooth scroll
+navLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
+</html>
