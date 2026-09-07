@@ -846,50 +846,84 @@
                             <h2 class="text-2xl md:text-3xl font-extrabold text-slate-800">住宿飯店資訊與房間分配</h2>
                         </div>
                     </div>
-
+                
                     <!-- Hotel Detail Card -->
                     <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 grid grid-cols-1 md:grid-cols-12">
-                        <div class="md:col-span-5 bg-slate-200 relative min-h-[220px]">
-                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" 
-                                 alt="東橫INN 旭橋站前" class="w-full h-full object-cover">
-                            <span class="absolute top-3 left-3 bg-okinawa-deepblue text-white text-xs font-bold px-3 py-1 rounded-full shadow">
-                                4 晚連續入住 (9/9 - 9/13)
-                            </span>
+                        <!-- Hotel Images Gallery -->
+                        <div class="md:col-span-5 relative bg-slate-100 p-2 flex flex-col justify-between gap-2">
+                            <!-- Main Image -->
+                            <div class="relative h-48 md:h-56 rounded-xl overflow-hidden group">
+                                <img src="https://raw.githubusercontent.com/chiouuuuu/okinawa202609/51cda0a23c52cf89ed24e6d1fe73a8e60e06a732/pics/%E6%9D%B1%E6%A9%ABINN%20(1).png" 
+                                     alt="東橫INN 旭橋站前 外觀" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                                <span class="absolute top-2 left-2 bg-okinawa-deepblue/90 backdrop-blur-sm text-white text-xs font-bold px-2.5 py-1 rounded-full shadow">
+                                    4 晚連續入住 (9/9 - 9/13)
+                                </span>
+                            </div>
+                            <!-- Sub Images Grid -->
+                            <div class="grid grid-cols-2 gap-2 h-24 md:h-28">
+                                <div class="rounded-lg overflow-hidden group">
+                                    <img src="https://raw.githubusercontent.com/chiouuuuu/okinawa202609/51cda0a23c52cf89ed24e6d1fe73a8e60e06a732/pics/%E6%9D%B1%E6%A9%ABINN%20(2).png" 
+                                         alt="東橫INN 旭橋站前 大廳" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                                </div>
+                                <div class="rounded-lg overflow-hidden group">
+                                    <img src="https://raw.githubusercontent.com/chiouuuuu/okinawa202609/51cda0a23c52cf89ed24e6d1fe73a8e60e06a732/pics/%E6%9D%B1%E6%A9%ABINN%20(3).png" 
+                                         alt="東橫INN 旭橋站前 客房" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                                </div>
+                            </div>
                         </div>
+                
+                        <!-- Hotel Content -->
                         <div class="md:col-span-7 p-6 space-y-4 flex flex-col justify-between">
                             <div>
                                 <h3 class="text-xl font-black text-slate-800">東橫INN 沖繩那霸旭橋站前</h3>
-                                <p class="text-xs text-slate-500 mt-1">Toyoko Inn Okinawa Naha Asahibashi Ekimae</p>
-
-                                <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600">
-                                    <div><strong>📍 地址：</strong> 2-1-20 Kume, Naha city, Okinawa</div>
+                                <p class="text-xs text-slate-500 mt-0.5">Toyoko Inn Okinawa Naha Asahibashi Ekimae</p>
+                
+                                <!-- Basic Info Grid -->
+                                <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600">
+                                    <div class="sm:col-span-2"><strong>📍 地址：</strong> 2-1-20 Kume, Naha city, Okinawa 900-0033 Japan</div>
                                     <div><strong>📞 電話：</strong> 098-951-1045</div>
                                     <div><strong>🚶 交通：</strong> 單軌「旭橋站西口」步行 7 分鐘</div>
-                                    <div><strong>⏰ 時間：</strong> Check-in 15:00 / Out 10:00</div>
+                                    <div><strong>⏰ 時間：</strong> Check-in 15:00 / Check-out 10:00</div>
                                     <div><strong>🍳 早餐：</strong> 06:30 - 09:00 (免費提供)</div>
-                                    <div><strong>🍹 迎賓飲品：</strong> 15:00 - 21:00</div>
+                                    <div class="sm:col-span-2"><strong>🍹 迎賓飲品：</strong> 15:00 - 21:00</div>
+                                </div>
+                
+                                <!-- Facilities & Services Notice Box -->
+                                <div class="mt-3 p-3 bg-sky-50/70 border border-sky-100 rounded-xl text-xs space-y-1.5 text-slate-700">
+                                    <div class="font-bold text-sky-900 flex items-center gap-1.5 border-b border-sky-200/60 pb-1">
+                                        <i class="fa-solid fa-bell-concierge text-sky-600"></i> 其他服務與備品說明
+                                    </div>
+                                    <ul class="space-y-1 text-slate-600 text-[11px] leading-relaxed">
+                                        <li>• <strong>便利服務：</strong>館內提供 WiFiBOX 行動電源租借/歸還服務、行李寄送服務。</li>
+                                        <li>• <strong>大廳備品區：</strong>櫃檯附近備有睡衣（部分客房置於房內）、固體香皂、浴帽、刮鬍刀及梳子，請按需領取。其餘借用物品請至櫃檯洽詢。</li>
+                                    </ul>
                                 </div>
                             </div>
-
-                            <div class="flex flex-wrap gap-2 pt-2">
+                
+                            <!-- Action Buttons -->
+                            <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-100">
                                 <a href="https://maps.app.goo.gl/FAPWnsdsTDwdDFwp7" target="_blank" 
-                                   class="px-4 py-2 bg-okinawa-blue hover:bg-sky-600 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5">
-                                    <i class="fa-solid fa-map-location-dot"></i> 開啟 Google Map 導航
+                                   class="px-3.5 py-2 bg-okinawa-blue hover:bg-sky-600 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5">
+                                    <i class="fa-solid fa-map-location-dot"></i> Google Map 導航
                                 </a>
                                 <a href="https://www.toyoko-inn.com/china/search/detail/00076/" target="_blank" 
-                                   class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-bold transition flex items-center gap-1.5">
-                                    <i class="fa-solid fa-globe"></i> 官方網站
+                                   class="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-bold transition flex items-center gap-1.5">
+                                    <i class="fa-solid fa-globe"></i> 飯店官方網站
+                                </a>
+                                <a href="https://www.toyoko-inn.com/china/feature/room/" target="_blank" 
+                                   class="px-3.5 py-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 rounded-xl text-xs font-bold transition flex items-center gap-1.5 border border-indigo-100">
+                                    <i class="fa-solid fa-bed"></i> 客房與服務詳細說明
                                 </a>
                             </div>
                         </div>
                     </div>
-
+                
                     <!-- Room Assignment Table -->
                     <div id="section-2-room" class="scroll-mt-12 bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-3">
                         <h3 class="text-base font-bold text-slate-800 flex items-center gap-2">
                             <i class="fa-solid fa-door-closed text-okinawa-blue"></i> 👥 房間分配表 ( Room Allocation - 6 Rooms )
                         </h3>
-
+                
                         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 text-xs">
                             <div class="bg-sky-50 p-3 rounded-xl border border-sky-100 text-center space-y-1">
                                 <div class="font-bold text-sky-900 border-b border-sky-200 pb-1">Room 1</div>
@@ -917,10 +951,8 @@
                             </div>
                         </div>
                     </div>
-
+                
                 </section>
-
-
                 <!-- SECTION 3: 5 天行程介紹 -->
                 <section id="section-3" class="scroll-mt-12 space-y-6">
                     
