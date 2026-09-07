@@ -92,18 +92,11 @@
         <div class="w-80 bg-white h-full shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
             <div>
                 <div class="flex justify-between items-center mb-6 border-b pb-4">
-                    <div class="flex items-center space-x-2">
-                        <i class="fa-solid fa-compass text-okinawa-blue text-xl"></i>
-                        <h3 class="font-bold text-okinawa-deepblue text-lg">快速導覽</h3>
-                    </div>
                     <button id="closeDrawerBtn" class="text-slate-400 hover:text-slate-700 p-1">
                         <i class="fa-solid fa-xmark text-2xl"></i>
                     </button>
                 </div>
                 <nav class="space-y-1.5 text-sm">
-                    <a href="#hero" class="mobile-nav-link flex items-center gap-3 p-2.5 rounded-xl hover:bg-sky-50 text-slate-700 font-medium">
-                        <i class="fa-solid fa-house text-okinawa-blue w-5"></i> 首頁主視覺
-                    </a>
                     
                     <div class="pt-2 pb-1 text-xs font-bold text-slate-400 uppercase tracking-wider">航班</div>
                     <a href="#section-1" class="mobile-nav-link flex items-center gap-3 p-2.5 rounded-xl hover:bg-sky-50 text-slate-700 font-medium pl-4">
@@ -201,7 +194,7 @@
                 </a>
                 <a href="#section-1-airport" class="nav-item flex items-center space-x-3 px-3 py-1.5 text-slate-600 rounded-xl hover:bg-sky-50 hover:text-okinawa-blue transition group">
                     <i class="fa-solid fa-building-user text-slate-400 group-hover:text-okinawa-blue w-4"></i>
-                    <span>3. 那霸機場 (OKA)</span>
+                    <span>3. 那霸機場樓層設施</span>
                 </a>
                 <a href="#section-1-luggage" class="nav-item flex items-center space-x-3 px-3 py-1.5 text-slate-600 rounded-xl hover:bg-sky-50 hover:text-okinawa-blue transition group">
                     <i class="fa-solid fa-suitcase-rolling text-slate-400 group-hover:text-okinawa-blue w-4"></i>
@@ -278,59 +271,30 @@
         </aside>
 
         <!-- Right Main Content Area -->
+
         <main class="flex-grow overflow-x-hidden min-w-0">
 
-            <!-- HERO SECTION - Full Unobstructed Key Visual -->
-            <section id="hero" class="relative bg-slate-950 text-white min-h-[65vh] md:min-h-[80vh] flex flex-col justify-end items-center overflow-hidden shadow-lg group">
-                <!-- Main Key Visual Image -->
-                <div class="absolute inset-0 z-0 flex items-center justify-center bg-slate-950">
-                    <img src="https://raw.githubusercontent.com/chiouuuuu/okinawa202609/36d96b83d8ba1a06b0a75b55efde407ac6b1bbe2/pics/%E6%B2%96%E7%B9%A9%E4%B9%8B%E6%97%85.png"
-                         alt="沖繩夏日海島主視覺" 
-                         class="w-full h-full object-contain md:object-cover object-center transition duration-700 group-hover:scale-[1.01]">
-                    <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-slate-900 to-transparent pointer-events-none"></div>
-                </div>
 
-                <!-- Floating Scroll Prompt Button at Bottom -->
-                <div class="relative z-10 pb-6 text-center">
-                    <a href="#hero-title" class="inline-flex items-center gap-2 bg-slate-900/80 hover:bg-okinawa-blue backdrop-blur-md px-5 py-2.5 rounded-full text-xs md:text-sm font-bold text-white border border-white/20 shadow-xl transition-all duration-300 hover:scale-105 animate-bounce">
-                        <span>往下滑動開啟行程指南</span>
-                        <i class="fa-solid fa-arrow-down text-yellow-300"></i>
-                    </a>
+
+            <!-- HERO SECTION - Full Unobstructed Key Visual -->
+
+            <section id="hero" class="relative bg-[#46baff] text-white min-h-[65vh] md:min-h-[80vh] flex flex-col justify-end items-center overflow-hidden group">
+
+                <!-- Main Key Visual Image -->
+
+                <div class="absolute inset-0 z-0 flex items-center justify-center bg-[#46baff]">
+
+                    <img src="https://raw.githubusercontent.com/chiouuuuu/okinawa202609/36d96b83d8ba1a06b0a75b55efde407ac6b1bbe2/pics/%E6%B2%96%E7%B9%A9%E4%B9%8B%E6%97%85.png"
+
+                         alt="沖繩夏日海島主視覺" 
+
+                         class="w-full h-full object-contain md:object-cover object-center transition duration-700 group-hover:scale-[1.01]">
+
+                    <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#46baff] to-transparent pointer-events-none"></div>
                 </div>
             </section>
-
             <!-- TITLE & OVERVIEW SECTION -->
-            <section id="hero-title" class="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-50 text-white pt-10 pb-12 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
-                <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                    <div class="space-y-3">
-                        <div class="inline-flex items-center gap-2 bg-okinawa-blue px-3.5 py-1 rounded-full text-xs font-bold text-sky-100 border border-sky-300/30 shadow-md">
-                            <i class="fa-solid fa-umbrella-beach text-yellow-300"></i> 5天4夜一頁式旅遊指南 (9/9 - 9/13)
-                        </div>
-                        <h1 class="text-3xl md:text-5xl font-black tracking-wide font-title leading-tight text-white drop-shadow">
-                            2026 沖繩夏日海島自由行
-                        </h1>
-                        <p class="text-sm md:text-base text-sky-100 max-w-xl font-light leading-relaxed">
-                            包含 12 人團體航班資訊、東橫INN住宿分房表、美麗海水族館、首里城開門儀式、美國村海上煙火與景點地圖。
-                        </p>
-                    </div>
-
-                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl flex md:flex-col gap-4 text-xs font-medium w-full md:w-auto justify-around shadow-lg flex-shrink-0">
-                        <div class="flex items-center gap-2.5">
-                            <i class="fa-solid fa-calendar-days text-yellow-300 text-lg w-5 text-center"></i>
-                            <div>
-                                <div class="text-[10px] text-sky-200 uppercase">Travel Dates</div>
-                                <div class="font-bold text-white">2026/09/09 — 09/13</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-2.5">
-                            <i class="fa-solid fa-users text-sky-300 text-lg w-5 text-center"></i>
-                            <div>
-                                <div class="text-[10px] text-sky-200 uppercase">Team Members</div>
-                                <div class="font-bold text-white">12 位同行旅伴</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <section id="hero-title" class="bg-gradient-to-b from-[#46baff] to-transparent text-slate-800 pt-10 pb-12 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
             </section>
 
 
@@ -644,97 +608,230 @@
                 </script>
 
 
-                    <!-- 2. Immigration & Visit Japan Web -->
-                    <div id="section-1-immigration" class="scroll-mt-12 bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-4">
+                    <!-- 2. Immigration & Visit Japan Web + Airport Guide -->
+                    <div id="section-1-immigration" class="scroll-mt-12 bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-6">
                         <h3 class="text-lg font-bold text-okinawa-deepblue flex items-center gap-2">
-                            <i class="fa-solid fa-passport text-okinawa-blue"></i> 2. 出入境程序與 Visit Japan Web
+                            <i class="fa-solid fa-passport text-okinawa-blue"></i> 2. 出入境
                         </h3>
                     
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
-                            <div class="bg-sky-50/70 p-4 rounded-xl border border-sky-100 space-y-2">
-                                <div class="font-bold text-sky-900 flex items-center gap-2">
-                                    <i class="fa-solid fa-id-card text-okinawa-blue"></i> 台灣自動查驗通關 (e-Gate)
-                                </div>
-                                <p class="text-slate-600">免事先註冊！直接於台灣機場/港口通關閘道前，進行「註冊與通關二合一」即時辦理通關。</p>
+                        <!-- 1. 出境程序 (Departures) -->
+                        <div class="space-y-3">
+                            <div class="font-bold text-slate-800 text-sm flex items-center gap-2 border-l-4 border-sky-500 pl-2.5">
+                                <i class="fa-solid fa-plane-departure text-sky-500"></i> 出境流程 (Taiwan / Naha Outbound)
                             </div>
-                    
-                            <div class="bg-emerald-50/70 p-4 rounded-xl border border-emerald-100 space-y-2">
-                                <div class="font-bold text-emerald-900 flex items-center gap-2">
-                                    <i class="fa-solid fa-mobile-screen-button text-emerald-600"></i> 日本 Visit Japan Web (VJW) 申報
+                            <div class="grid grid-cols-2 md:grid-cols-5 gap-3 text-xs md:text-sm">
+                                <div class="bg-sky-50/70 p-3.5 rounded-xl border border-sky-100 flex flex-col justify-between space-y-1.5">
+                                    <div class="font-bold text-sky-900 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-clipboard-check text-sky-600"></i> 1. 報到領票
+                                    </div>
+                                    <p class="text-slate-600 text-xs">出發前 2.5~3 小時至機場櫃檯或自助機器辦理 Check-in。</p>
                                 </div>
-                                <p class="text-slate-600">整合「入境審查」與「海關申報」，務必於 入境前 6 小時 完成線上填寫，並將 QR Code 截圖備用！</p>
+                                <div class="bg-sky-50/70 p-3.5 rounded-xl border border-sky-100 flex flex-col justify-between space-y-1.5">
+                                    <div class="font-bold text-sky-900 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-suitcase text-sky-600"></i> 2. 托運行李及申報
+                                    </div>
+                                    <p class="text-slate-600 text-xs">應申報/退稅物品須先經海關櫃檯查驗再託運。檢查托運行李、完成安檢過照。</p>
+                                </div>
+                                <div class="bg-sky-50/70 p-3.5 rounded-xl border border-sky-100 flex flex-col justify-between space-y-1.5">
+                                    <div class="font-bold text-sky-900 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-shield-halved text-sky-600"></i> 3. 安全檢查
+                                    </div>
+                                    <p class="text-slate-600 text-xs">取出隨身電腦、平板及 100ml 以內液體，通過金屬探測門。</p>
+                                </div>
+                                <div class="bg-sky-50/70 p-3.5 rounded-xl border border-sky-100 flex flex-col justify-between space-y-1.5">
+                                    <div class="font-bold text-sky-900 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-id-card-clip text-sky-600"></i> 4. 證照查驗
+                                    </div>
+                                    <p class="text-slate-600 text-xs">台灣：可利用台灣 e-Gate 自動查驗通關；那霸：依現場引導通關。</p>
+                                </div>
+                                <div class="bg-sky-50/70 p-3.5 rounded-xl border border-sky-100 flex flex-col justify-between space-y-1.5">
+                                    <div class="font-bold text-sky-900 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-plane-arrival text-sky-600"></i> 5. 前往登機門
+                                    </div>
+                                    <p class="text-slate-600 text-xs">務必於起飛前30分鐘，進入候機室登機。</p>
+                                </div>
+                            </div>
+                            <div class="bg-amber-50 p-3 rounded-xl border border-amber-200 text-xs text-amber-900 flex items-start gap-2">
+                                <i class="fa-solid fa-triangle-exclamation text-amber-600 mt-0.5 shrink-0"></i>
+                                <div><strong>出境注意事項：</strong>行動電源、鋰電池及打火機（限1個）必須隨身攜帶，嚴禁放入託運行李！</div>
+                            </div>
+                            <!-- 對應連結 -->
+                            <div class="flex flex-wrap gap-2 text-xs pt-1">
+                                <a href="https://www.taoyuan-airport.com/outbound" target="_blank" class="px-3 py-1.5 bg-sky-100 text-sky-800 rounded-lg font-bold hover:bg-sky-200 transition flex items-center gap-1.5">
+                                    <i class="fa-solid fa-plane-departure text-sky-600"></i> 桃機出境說明
+                                </a>
+                                <a href="https://www.naha-airport.co.jp/zh-hant/flight/route/international_departure/" target="_blank" class="px-3 py-1.5 bg-indigo-100 text-indigo-800 rounded-lg font-bold hover:bg-indigo-200 transition flex items-center gap-1.5">
+                                    <i class="fa-solid fa-building-airport text-indigo-600"></i> 那霸機場國際線出境
+                                </a>
+                                <a href="https://youtu.pPG1QDoxJZU" target="_blank" class="px-3 py-1.5 bg-red-100 text-red-700 rounded-lg font-bold hover:bg-red-200 transition flex items-center gap-1.5">
+                                    <i class="fa-brands fa-youtube text-red-600"></i> 桃機樂桃出境教學
+                                </a>
                             </div>
                         </div>
                     
-                        <!-- Video Links -->
-                        <div class="flex flex-wrap gap-2 text-xs pt-2">
-                            <a href="https://services.digital.go.jp/zh-cmn-hant/visit-japan-web/" target="_blank" class="px-3 py-2 bg-okinawa-blue text-white rounded-xl font-bold hover:bg-sky-600 transition flex items-center gap-1.5">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Japan Web 官方網站
-                            </a>
-                            <a href="https://youtu.pPG1QDoxJZU" target="_blank" class="px-3 py-2 bg-red-100 text-red-700 rounded-xl font-bold hover:bg-red-200 transition flex items-center gap-1.5">
-                                <i class="fa-brands fa-youtube text-red-600"></i> 桃機樂桃出境影片教學
-                            </a>
-                            <a href="https://www.flypeach.com/tw/lm/ai/airports/checkin/auto-checkin" target="_blank" class="px-3 py-2 bg-purple-100 text-purple-700 rounded-xl font-bold hover:bg-purple-200 transition flex items-center gap-1.5">
-                                <i class="fa-solid fa-circle-info text-purple-600"></i> 樂桃自助報到說明
-                            </a>
+                        <!-- 2. 入境程序 (Arrivals) -->
+                        <div class="space-y-3">
+                            <div class="font-bold text-slate-800 text-sm flex items-center gap-2 border-l-4 border-emerald-500 pl-2.5">
+                                <i class="fa-solid fa-plane-arrival text-emerald-600"></i> 入境流程 (Japan / Taiwan Inbound)
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs md:text-sm">
+                                <div class="bg-emerald-50/70 p-3.5 rounded-xl border border-emerald-100 flex flex-col justify-between space-y-1.5">
+                                    <div class="font-bold text-emerald-900 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-person-walking-arrow-right text-emerald-600"></i> 1. 下機步道
+                                    </div>
+                                    <p class="text-slate-600 text-xs">跟著入境指示走，前往入境審查及檢驗區域。</p>
+                                </div>
+                                <div class="bg-emerald-50/70 p-3.5 rounded-xl border border-emerald-100 flex flex-col justify-between space-y-1.5">
+                                    <div class="font-bold text-emerald-900 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-qrcode text-emerald-600"></i> 2. 入境審查
+                                    </div>
+                                    <p class="text-slate-600 text-xs">那霸：出示 VJW QR Code 或紙本入境卡，按壓指紋與拍照。台灣：檢查護照。</p>
+                                </div>
+                                <div class="bg-emerald-50/70 p-3.5 rounded-xl border border-emerald-100 flex flex-col justify-between space-y-1.5">
+                                    <div class="font-bold text-emerald-900 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-suitcase-rolling text-emerald-600"></i> 3. 提取行李
+                                    </div>
+                                    <p class="text-slate-600 text-xs">前往指定轉盤領取託運行李，確認行李號碼牌符合。</p>
+                                </div>
+                                <div class="bg-emerald-50/70 p-3.5 rounded-xl border border-emerald-100 flex flex-col justify-between space-y-1.5">
+                                    <div class="font-bold text-emerald-900 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-file-invoice text-emerald-600"></i> 4. 海關申報
+                                    </div>
+                                    <p class="text-slate-600 text-xs">那霸：掃描 VJW 海關申報 QR Code（或提交紙本）。台灣：應申報/退稅物品，於領取行李後由海關紅線櫃檯通關。順利出關！</p>
+                                </div>
+                            </div>
+                            <div class="bg-amber-50 p-3 rounded-xl border border-amber-200 text-xs text-amber-900 flex items-start gap-2">
+                                <i class="fa-solid fa-triangle-exclamation text-amber-600 mt-0.5 shrink-0"></i>
+                                <div><strong>入境注意事項：</strong>VJW 務必於入境前完成填寫並截圖！任何「禽畜肉類及加工肉品」、生鮮水產、非全熟或加工過之蛋奶產品、新鮮水果嚴禁攜帶入境台灣或日本。各類藥品有規定攜帶數量也須留意。</div>
+                            </div>
+                            <!-- 對應連結 -->
+                            <div class="flex flex-wrap gap-2 text-xs pt-1">
+                                <a href="https://services.digital.go.jp/zh-cmn-hant/visit-japan-web/" target="_blank" class="px-3 py-1.5 bg-okinawa-blue text-white rounded-lg font-bold hover:bg-sky-600 transition flex items-center gap-1.5">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Japan Web 官方網站
+                                </a>
+                                <a href="https://www.naha-airport.co.jp/zh-hant/flight/route/international_arrival/" target="_blank" class="px-3 py-1.5 bg-indigo-100 text-indigo-800 rounded-lg font-bold hover:bg-indigo-200 transition flex items-center gap-1.5">
+                                    <i class="fa-solid fa-building-airport text-indigo-600"></i> 那霸機場國際線入境
+                                </a>
+                                <a href="https://www.taoyuan-airport.com/entry" target="_blank" class="px-3 py-1.5 bg-sky-100 text-sky-800 rounded-lg font-bold hover:bg-sky-200 transition flex items-center gap-1.5">
+                                    <i class="fa-solid fa-plane-arrival text-sky-600"></i> 桃機入境說明
+                                </a>
+                            </div>
                         </div>
                     </div>
-
+                    
                     <!-- 3. Naha Airport (OKA) Intro -->
                     <div id="section-1-airport" class="scroll-mt-12 bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-4">
                         <h3 class="text-lg font-bold text-okinawa-deepblue flex items-center gap-2">
-                            <i class="fa-solid fa-building-user text-okinawa-blue"></i> 3. 那霸機場 (OKA) 樓層設施導覽
+                            <i class="fa-solid fa-building-user text-okinawa-blue"></i> 3. 那霸機場樓層設施
                         </h3>
-
+                    
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
-                            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
-                                <div class="font-extrabold text-slate-800 text-sm mb-1 text-okinawa-blue">1F 到達大廳</div>
-                                <p class="text-slate-600">入境大廳、計程車 / 公車乘車處、旅遊資訊諮詢中心、便利商店。</p>
+                            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex flex-col justify-between">
+                                <div>
+                                    <div class="font-extrabold text-slate-800 text-sm mb-1 text-okinawa-blue flex items-center gap-1.5">
+                                        <i class="fa-solid fa-bus text-sky-600"></i> 1F 到達大廳
+                                    </div>
+                                    <p class="text-slate-600">入境大廳、計程車 / 路線公車 / 高速巴士乘車處、租車接駁區、旅遊資訊諮詢中心、便利商店。</p>
+                                </div>
                             </div>
-
-                            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
-                                <div class="font-extrabold text-slate-800 text-sm mb-1 text-okinawa-blue">2F 出境 & 伴手禮</div>
-                                <p class="text-slate-600">伴手禮街（紅芋塔/黑糖/泡盛）、<strong>天橋直通單軌電車站</strong>、Airporter Luggage 櫃台。</p>
+                    
+                            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex flex-col justify-between">
+                                <div>
+                                    <div class="font-extrabold text-slate-800 text-sm mb-1 text-okinawa-blue flex items-center gap-1.5">
+                                        <i class="fa-solid fa-train-subway text-emerald-600"></i> 2F 出境 & 伴手禮
+                                    </div>
+                                    <p class="text-slate-600">伴手禮街（紅芋塔/黑糖/泡盛）、「世界第一蘋果派」mille mele、天橋直通單軌電車站 (Yui-Rail)、Airporter Luggage 寄物櫃台。</p>
+                                </div>
                             </div>
-
-                            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
-                                <div class="font-extrabold text-slate-800 text-sm mb-1 text-okinawa-blue">3F 報到櫃台</div>
-                                <p class="text-slate-600">國內線與國際線各航空公司（樂桃、虎航、星宇、越捷等）自助報到機與託運櫃台。</p>
+                    
+                            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex flex-col justify-between">
+                                <div>
+                                    <div class="font-extrabold text-slate-800 text-sm mb-1 text-okinawa-blue flex items-center gap-1.5">
+                                        <i class="fa-solid fa-plane text-indigo-600"></i> 3F 報到櫃台
+                                    </div>
+                                    <p class="text-slate-600">國內線與國際線各航空公司（樂桃、虎航、星宇、越捷等）自助報到機與託運櫃台。</p>
+                                </div>
                             </div>
-
-                            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
-                                <div class="font-extrabold text-slate-800 text-sm mb-1 text-okinawa-blue">4F 景觀餐廳 & 展望台</div>
-                                <p class="text-slate-600">沖繩麵、A&W 美式漢堡、戶外觀景台（免費俯瞰飛機起降）。</p>
+                    
+                            <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 flex flex-col justify-between">
+                                <div>
+                                    <div class="font-extrabold text-slate-800 text-sm mb-1 text-okinawa-blue flex items-center gap-1.5">
+                                        <i class="fa-solid fa-utensils text-amber-600"></i> 4F 景觀餐廳 & 展望台
+                                    </div>
+                                    <p class="text-slate-600">沖繩麵、A&W 美式漢堡、戶外免費觀景台（俯瞰飛機起降與海景）。</p>
+                                </div>
                             </div>
                         </div>
+                    
+                        <!-- 對應連結 -->
+                        <div class="flex flex-wrap gap-2 text-xs pt-1">
+                            <a href="https://www.naha-airport.co.jp/zh-hant/access/" target="_blank" class="px-3 py-1.5 bg-sky-100 text-sky-800 rounded-lg font-bold hover:bg-sky-200 transition flex items-center gap-1.5">
+                                <i class="fa-solid fa-compass text-sky-600"></i> 那霸機場交通官方指南
+                            </a>
+                            <a href="https://tingandkao.com/naha-airport/#rtoc-1" target="_blank" class="px-3 py-1.5 bg-slate-100 text-slate-700 rounded-lg font-bold hover:bg-slate-200 transition flex items-center gap-1.5">
+                                <i class="fa-solid fa-book-open text-slate-600"></i> 樓層與設施詳細圖解
+                            </a>
+                        </div>
                     </div>
-
+                    
                     <!-- 4. Luggage Regulations -->
-                    <div id="section-1-luggage" class="scroll-mt-12 bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-3">
+                    <div id="section-1-luggage" class="scroll-mt-12 bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-4">
                         <h3 class="text-lg font-bold text-okinawa-deepblue flex items-center gap-2">
-                            <i class="fa-solid fa-suitcase-rolling text-okinawa-blue"></i> 4. 託運與隨身行李注意事項
+                            <i class="fa-solid fa-suitcase-rolling text-okinawa-blue"></i> 4. 行李與海關規範
                         </h3>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                            <div class="p-3.5 bg-red-50 border border-red-200 rounded-xl text-slate-700 space-y-1">
-                                <div class="font-bold text-red-800 flex items-center gap-1.5">
-                                    <i class="fa-solid fa-ban text-red-600"></i> 嚴禁託運 (必須放手提隨身)
+                    
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                            <!-- 只能手提攜帶 -->
+                            <div class="p-3.5 bg-red-50 border border-red-200 rounded-xl text-slate-700 space-y-1.5">
+                                <div class="font-bold text-red-800 flex items-center gap-1.5 border-b border-red-200 pb-1">
+                                    <i class="fa-solid fa-hand-holding-hand text-red-600"></i> 僅限隨身手提 (嚴禁託運)
                                 </div>
-                                <p>• 行動電源、單體鋰電池、數位相機電池。</p>
-                                <p>• 小型打火機 (每人限帶 1 個)。</p>
+                                <ul class="space-y-1 text-slate-600">
+                                    <li>• <strong>行動電源 & 備用鋰電池：</strong>容量限 100Wh~160Wh（需標示清晰，每人限帶 2 個，100Wh 以下正常攜帶），不可在機上充電及使用。</li>
+                                    <li>• <strong>電子煙 & 藍牙耳機盒：</strong>內建鋰電池產品。</li>
+                                    <li>• <strong>小型打火機：</strong>每人隨身限帶 1 個（藍焰防風打火機嚴禁攜帶）。</li>
+                                </ul>
                             </div>
-
-                            <div class="p-3.5 bg-amber-50 border border-amber-200 rounded-xl text-slate-700 space-y-1">
-                                <div class="font-bold text-amber-900 flex items-center gap-1.5">
-                                    <i class="fa-solid fa-flask text-amber-600"></i> 手提液體與入境違禁品
+                    
+                            <!-- 必須託運 -->
+                            <div class="p-3.5 bg-amber-50 border border-amber-200 rounded-xl text-slate-700 space-y-1.5">
+                                <div class="font-bold text-amber-900 flex items-center gap-1.5 border-b border-amber-200 pb-1">
+                                    <i class="fa-solid fa-box-archive text-amber-600"></i> 必須放置託運 (嚴禁隨身)
                                 </div>
-                                <p>• 隨身液體單件需 &le; 100ml，裝入 1L 透明夾鏈袋。</p>
-                                <p>• <strong>嚴禁攜帶肉類製品</strong>（香腸、肉乾、加工肉餡）及新鮮水果。</p>
+                                <ul class="space-y-1 text-slate-600">
+                                    <li>• <strong>超過 100ml 液體/膠狀物：</strong>飲料、保濕噴霧、膏狀保養品。</li>
+                                    <li>• <strong>刀具類與尖銳物：</strong>剪刀、指甲剪、美工刀、修眉刀。</li>
+                                    <li>• <strong>運動用品與腳架：</strong>管徑 &gt;1cm 或縮長 &gt;60cm 之相機腳架/自拍棒、球棒。</li>
+                                </ul>
+                            </div>
+                    
+                            <!-- 海關申報與嚴禁入境 -->
+                            <div class="p-3.5 bg-rose-50 border border-rose-200 rounded-xl text-slate-700 space-y-1.5">
+                                <div class="font-bold text-rose-900 flex items-center gap-1.5 border-b border-rose-200 pb-1">
+                                    <i class="fa-solid fa-ban text-rose-600"></i> 入境違禁品 & 申報規定
+                                </div>
+                                <ul class="space-y-1 text-slate-600">
+                                    <li>• <strong>肉製品全面禁止：</strong>香腸、肉乾、含肉調理包、泡麵肉塊、飛機餐肉類。</li>
+                                    <li>• <strong>生鮮蔬果：</strong>新鮮水果（蘋果、芭樂）、蔬菜、植物種子。</li>
+                                    <li>• <strong>藥品限量：</strong>非處方藥每種最多 12 瓶/盒，總計不超過 36 瓶/盒。</li>
+                                    <li>• <strong>現金限制：</strong>超過 100 萬日圓（或外幣等值 1 萬美元）需主動向海關申報。</li>
+                                </ul>
                             </div>
                         </div>
+                    
+                        <!-- 對應連結 -->
+                        <div class="flex flex-wrap gap-2 text-xs pt-1">
+                            <a href="https://www.taoyuan-airport.com/customsdeclarations" target="_blank" class="px-3 py-1.5 bg-sky-100 text-sky-800 rounded-lg font-bold hover:bg-sky-200 transition flex items-center gap-1.5">
+                                <i class="fa-solid fa-passport text-sky-600"></i> 桃機海關通關與申報說明
+                            </a>
+                            <a href="https://web.customs.gov.tw/taipei/singlehtml/3392?cntId=cus2_3392_3392_1351" target="_blank" class="px-3 py-1.5 bg-indigo-100 text-indigo-800 rounded-lg font-bold hover:bg-indigo-200 transition flex items-center gap-1.5">
+                                <i class="fa-solid fa-building-columns text-indigo-600"></i> 台北關入境旅客攜帶行李規定
+                            </a>
+                            <a href="https://www.funliday.com/posts/2026-japan-airline-powerbank-new-rules/" target="_blank" class="px-3 py-1.5 bg-red-100 text-red-700 rounded-lg font-bold hover:bg-red-200 transition flex items-center gap-1.5">
+                                <i class="fa-solid fa-battery-half text-red-600"></i> Funliday 日本航線行動電源最新規定
+                            </a>
+                        </div>
                     </div>
-
-                </section>
-
 
                 <!-- SECTION 2: 住宿資訊與房間分配表 -->
                 <section id="section-2" class="scroll-mt-12 space-y-6">
