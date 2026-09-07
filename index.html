@@ -150,10 +150,10 @@
 
                     <div class="pt-2 pb-1 text-xs font-bold text-slate-400 uppercase tracking-wider">補充</div>
                     <a href="#section-supplement-emergency" class="mobile-nav-link flex items-center gap-3 p-2.5 rounded-xl hover:bg-sky-50 text-slate-700 font-medium pl-4">
-                        <i class="fa-solid fa-phone-flip text-okinawa-blue w-5"></i> 緊急情況時的資訊
+                        <i class="fa-solid fa-phone-flip text-okinawa-blue w-5"></i> 緊急連絡資訊
                     </a>
                     <a href="#section-supplement-worship" class="mobile-nav-link flex items-center gap-3 p-2.5 rounded-xl hover:bg-sky-50 text-slate-700 font-medium pl-4">
-                        <i class="fa-solid fa-torii-gate text-okinawa-blue w-5"></i> 參拜說明
+                        <i class="fa-solid fa-torii-gate text-okinawa-blue w-5"></i> 神社參拜說明
                     </a>
                 </nav>
             </div>
@@ -2226,10 +2226,10 @@
                     });
                 </script>
 
-
                 <!-- SECTION SUPPLEMENT: 行前補充與緊急指南 -->
                 <section id="section-supplement" class="scroll-mt-12 space-y-6">
                     
+                    <!-- 章節標題區 -->
                     <div class="flex items-center space-x-3 pb-3 border-b-2 border-okinawa-blue">
                         <div class="w-10 h-10 rounded-2xl bg-okinawa-blue text-white flex items-center justify-center font-black text-xl shadow-md">
                             5
@@ -2238,75 +2238,208 @@
                             <h2 class="text-2xl md:text-3xl font-extrabold text-slate-800">補充資訊</h2>
                         </div>
                     </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                        <!-- Emergency Info -->
-                        <div id="section-supplement-emergency" class="scroll-mt-12 bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-4">
-                            <h3 class="text-lg font-bold text-red-700 flex items-center gap-2">
-                                <i class="fa-solid fa-phone-flip text-red-600"></i> 緊急情況時的資訊 (Emergency Contact)
+                
+                    <!-- 改為單欄上下垂直排列 (flex-col) -->
+                    <div class="flex flex-col gap-6">
+                
+                        <!-- 1. 緊急情況與救援指南 (上方) -->
+                        <div id="section-supplement-emergency" class="scroll-mt-12 bg-white rounded-2xl p-5 md:p-6 shadow-sm border border-slate-200 space-y-5">
+                            
+                            <!-- 標題 -->
+                            <h3 class="text-lg font-extrabold text-red-600 flex items-center gap-2 border-b-2 border-red-100 pb-2.5">
+                                <i class="fa-solid fa-phone-flip text-red-500"></i> 緊急連絡資訊
                             </h3>
-
-                            <div class="space-y-2.5 text-xs">
-                                <div class="bg-red-50 p-3 rounded-xl border border-red-100 flex justify-between items-center">
-                                    <div>
-                                        <div class="font-bold text-red-900">警察局 (報案)</div>
-                                        <div class="text-slate-500">Police Department</div>
+                        
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                
+                                <!-- 當地報案與救護車 (110 / 119) -->
+                                <div class="grid grid-cols-2 gap-3 md:col-span-2">
+                                    <div class="bg-red-50/80 p-3.5 rounded-xl border border-red-200 flex items-center justify-between shadow-2xs">
+                                        <div>
+                                            <div class="font-bold text-red-950 text-sm flex items-center gap-1.5">
+                                                <i class="fa-solid fa-shield-halved text-red-600"></i> 警察局 (報案)
+                                            </div>
+                                            <div class="text-xs text-red-700/80 font-medium">Police Department</div>
+                                        </div>
+                                        <div class="text-xl md:text-2xl font-black text-red-600 font-mono tracking-tight">
+                                            110
+                                        </div>
                                     </div>
-                                    <div class="text-lg font-black text-red-600">撥打 110</div>
-                                </div>
-
-                                <div class="bg-red-50 p-3 rounded-xl border border-red-100 flex justify-between items-center">
-                                    <div>
-                                        <div class="font-bold text-red-900">消防局 / 救護車</div>
-                                        <div class="text-slate-500">Ambulance & Fire</div>
+                        
+                                    <div class="bg-red-50/80 p-3.5 rounded-xl border border-red-200 flex items-center justify-between shadow-2xs">
+                                        <div>
+                                            <div class="font-bold text-red-950 text-sm flex items-center gap-1.5">
+                                                <i class="fa-solid fa-truck-medical text-red-600"></i> 消防局 / 救護車
+                                            </div>
+                                            <div class="text-xs text-red-700/80 font-medium">Ambulance & Fire</div>
+                                        </div>
+                                        <div class="text-xl md:text-2xl font-black text-red-600 font-mono tracking-tight">
+                                            119
+                                        </div>
                                     </div>
-                                    <div class="text-lg font-black text-red-600">撥打 119</div>
                                 </div>
-
-                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-1">
-                                    <div class="font-bold text-slate-800">台北駐日經濟文化代表處那霸分處</div>
-                                    <p class="text-slate-600">• 電話：098-862-7008</p>
-                                    <p class="text-slate-600">• 24小時緊急急難救助專線：090-1942-1580</p>
+                        
+                                <!-- JNTO 多語諮詢熱線 -->
+                                <div class="bg-sky-50/70 p-4 rounded-xl border border-sky-200 flex flex-col justify-between space-y-3">
+                                    <div class="space-y-1.5">
+                                        <div class="flex items-center justify-between">
+                                            <div class="font-bold text-sky-950 text-sm flex items-center gap-1.5">
+                                                <i class="fa-solid fa-headset text-sky-600"></i> JNTO Visitor Hotline
+                                            </div>
+                                            <span class="text-xs bg-sky-200/80 text-sky-900 px-2 py-0.5 rounded-full font-bold">24hr 中文</span>
+                                        </div>
+                                        <p class="text-xs text-slate-600 leading-relaxed">
+                                            緊急事故、災害支援協助及旅遊資訊諮詢。
+                                        </p>
+                                    </div>
+                                    <div class="text-sm font-bold text-sky-900 bg-white px-3 py-2 rounded-lg border border-sky-300/80 inline-flex items-center gap-2 shadow-2xs w-fit">
+                                        <i class="fa-solid fa-phone text-sky-600"></i>
+                                        <span class="font-mono">050-3816-2787</span>
+                                    </div>
                                 </div>
-
-                                <div class="bg-sky-50 p-3 rounded-xl border border-sky-100 space-y-1">
-                                    <div class="font-bold text-sky-900">日本觀光局多語諮詢熱線 (JNTO Visit Japan Call)</div>
-                                    <p class="text-slate-600">• 050-3816-2720（提供 24 小時繁體中文服務）</p>
+                        
+                                <!-- JNTO 醫療搜尋支援 -->
+                                <div class="bg-emerald-50/70 p-4 rounded-xl border border-emerald-200 flex flex-col justify-between space-y-3">
+                                    <div class="space-y-1.5">
+                                        <div class="font-bold text-emerald-950 text-sm flex items-center gap-1.5">
+                                            <i class="fa-solid fa-user-doctor text-emerald-600"></i> JNTO Medical Information
+                                        </div>
+                                        <p class="text-xs text-slate-600 leading-relaxed">
+                                            旅途中身體不適時，可線上查詢提供多語言服務的醫療院所。
+                                        </p>
+                                    </div>
+                                    <a href="https://www.jnto.go.jp/emergency/chc/mi_guide.html" target="_blank" class="w-full px-3 py-2 bg-white hover:bg-emerald-100/60 text-emerald-900 rounded-lg text-xs font-bold transition border border-emerald-300 flex items-center justify-center gap-2 shadow-2xs">
+                                        <i class="fa-solid fa-hospital text-emerald-600"></i> 查詢附近可就診醫院 / 診所 (官網)
+                                    </a>
                                 </div>
+                        
+                                <!-- 駐日代表處與外交部急難救助 -->
+                                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-4 md:col-span-2">
+                                    <div class="font-bold text-slate-800 text-sm flex items-center gap-2 border-b border-slate-200 pb-2">
+                                        <i class="fa-solid fa-building-flag text-slate-600"></i> 駐日機構與急難救助
+                                    </div>
+                                    
+                                    <!-- 那霸分處 -->
+                                    <div class="space-y-2 text-sm">
+                                        <div class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+                                            <i class="fa-solid fa-location-dot text-red-500"></i> 台北駐日經濟文化代表處那霸分處
+                                        </div>
+                                        <p class="pl-2.5 text-slate-700 leading-relaxed">
+                                            • <strong>一般電話：</strong>台灣漫遊撥 <span class="font-bold text-slate-900 font-mono text-sm">+81-98-862-7008</span> ／ 日本當地撥 <span class="font-bold text-slate-900 font-mono text-xs">098-862-7008</span>
+                                        </p>
+                                        <div class="ml-2.5 p-3 bg-red-50/90 border border-red-200 rounded-xl space-y-1 shadow-2xs">
+                                            <div class="font-bold text-red-800 flex items-center gap-1.5 text-xs">
+                                                <i class="fa-solid fa-circle-exclamation text-red-600"></i> 急難救助專線（限車禍、生命安危等緊急情況）：
+                                            </div>
+                                            <p class="text-sm text-red-950 font-bold font-mono pl-5">
+                                                台灣漫遊撥 +81-80-8056-0122 ／ 日本當地撥 080-8056-0122
+                                            </p>
+                                        </div>
+                                    </div>
+                        
+                                    <!-- 外交部領事事務局 -->
+                                    <div class="pt-3 border-t border-slate-200 space-y-2.5 text-xs">
+                                        <div class="font-bold text-slate-900 text-sm md:text-sm">• 外交部領事事務局 (日本免付費急難專線)</div>
+                                        <div class="p-2.5 bg-white rounded-lg border border-slate-200/80 font-mono font-medium text-slate-700 leading-relaxed">
+                                            KDDI: <span class="font-bold text-slate-950">001-010-800-0885-0885</span> | SoftBank: <span class="font-bold text-slate-950">0061-010-800-0885-0885</span>
+                                        </div>
+                                        <div class="flex flex-wrap gap-2 pt-0.5">
+                                            <span class="bg-emerald-50 text-emerald-900 border border-emerald-200 px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5">
+                                                <i class="fa-brands fa-line text-emerald-600"></i> LINE ID: @boca.tw
+                                            </span>
+                                            <span class="bg-slate-200/70 text-slate-800 px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-1.5">
+                                                <i class="fa-solid fa-mobile-screen-button text-slate-600"></i> APP: 旅外安全指南
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                        
                             </div>
                         </div>
-
-                        <!-- Worship Instructions -->
-                        <div id="section-supplement-worship" class="scroll-mt-12 bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-4">
-                            <h3 class="text-lg font-bold text-amber-800 flex items-center gap-2">
-                                <i class="fa-solid fa-torii-gate text-amber-600"></i> 神社參拜說明 (Worship Etiquette)
-                            </h3>
-
-                            <div class="space-y-3 text-xs text-slate-600">
-                                <div class="bg-amber-50 p-3.5 rounded-xl border border-amber-200 space-y-1.5">
-                                    <div class="font-bold text-amber-900 flex items-center gap-2">
-                                        <i class="fa-solid fa-droplet text-amber-600"></i> 1. 手水舍淨身流程
+                
+                        <!-- 2. 神社參拜說明 (下方) -->
+                        <div id="section-supplement-worship" class="scroll-mt-12 bg-white rounded-2xl p-5 md:p-6 shadow-sm border border-slate-200 space-y-5">
+                            
+                            <!-- 章節標題 -->
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b-2 border-amber-100 pb-3">
+                                <h3 class="text-lg font-extrabold text-amber-900 flex items-center gap-2">
+                                    <i class="fa-solid fa-torii-gate text-amber-600"></i> 神社參拜說明
+                                </h3>
+                                <!-- 影片連結 -->
+                                <a href="https://youtu.be/gH_HUNY7NV8?si=81hMmhiILo3nZc2B&t=45" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-red-600 hover:text-red-700 bg-red-50 hover:bg-red-100/80 px-3 py-1.5 rounded-lg border border-red-200 transition w-fit">
+                                    <i class="fa-brands fa-youtube text-base"></i> 觀看參拜說明影片
+                                </a>
+                            </div>
+                        
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                
+                                <!-- 1. 手水舍淨身流程 -->
+                                <div class="bg-amber-50/40 p-4 rounded-xl border border-amber-200 space-y-3 flex flex-col justify-between">
+                                    <div class="space-y-2.5">
+                                        <div class="font-bold text-amber-950 text-sm flex items-center gap-2 border-b border-amber-200/80 pb-2">
+                                            <i class="fa-solid fa-droplet text-amber-600"></i> 1. 手水舍淨身步驟
+                                        </div>
+                                        
+                                        <p class="text-xs text-amber-800/90 bg-white/80 px-2.5 py-1.5 rounded-md border border-amber-200/50">
+                                            💡 <strong>小提醒：</strong>先用杓子取一瓢水，<strong>整個過程只取這一次水</strong>，記得裝滿一些！
+                                        </p>
+                        
+                                        <ol class="space-y-2 text-xs leading-relaxed text-slate-700 pt-1">
+                                            <li class="flex items-start gap-2">
+                                                <span class="font-bold bg-amber-500 text-white rounded-full w-4 h-4 flex items-center justify-center shrink-0 text-[10px] mt-0.5 shadow-2xs">1</span>
+                                                <span>以<strong>右手拿勺</strong>清洗左手。</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <span class="font-bold bg-amber-500 text-white rounded-full w-4 h-4 flex items-center justify-center shrink-0 text-[10px] mt-0.5 shadow-2xs">2</span>
+                                                <span>再換以<strong>左手拿勺</strong>清洗右手。</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <span class="font-bold bg-amber-500 text-white rounded-full w-4 h-4 flex items-center justify-center shrink-0 text-[10px] mt-0.5 shadow-2xs">3</span>
+                                                <span>將水倒在<strong>左手中漱口(以手遮口)</strong>，接著再清洗一次左手（切勿直接將柄杓送入口中）。</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <span class="font-bold bg-amber-500 text-white rounded-full w-4 h-4 flex items-center justify-center shrink-0 text-[10px] mt-0.5 shadow-2xs">4</span>
+                                                <span>最後將<strong>勺子稍微立起</strong>，讓剩餘的水流下清洗柄杓握柄。</span>
+                                            </li>
+                                        </ol>
                                     </div>
-                                    <p>① 右手拿柄杓舀水洗左手。</p>
-                                    <p>② 換左手拿柄杓洗右手。</p>
-                                    <p>③ 右手拿柄杓將水倒在左手掌漱口（切勿將柄杓直接送入口中）。</p>
-                                    <p>④ 再次清洗左手，最後將柄杓立起讓剩餘水流下清洗柄柄。</p>
                                 </div>
-
-                                <div class="bg-amber-50 p-3.5 rounded-xl border border-amber-200 space-y-1.5">
-                                    <div class="font-bold text-amber-900 flex items-center gap-2">
-                                        <i class="fa-solid fa-hands-clapping text-amber-600"></i> 2. 拜殿參拜方法「二禮二拍手一禮」
+                        
+                                <!-- 2. 拜殿參拜方法 -->
+                                <div class="bg-amber-50/40 p-4 rounded-xl border border-amber-200 space-y-3 flex flex-col justify-between">
+                                    <div class="space-y-2.5">
+                                        <div class="font-bold text-amber-950 text-sm flex items-center gap-2 border-b border-amber-200/80 pb-2">
+                                            <i class="fa-solid fa-hands-clapping text-amber-600"></i> 2. 拜殿參拜步驟「二禮二拍手一禮」
+                                        </div>
+                        
+                                        <ol class="space-y-2 text-xs leading-relaxed text-slate-700">
+                                            <li class="flex items-start gap-2">
+                                                <span class="font-bold bg-amber-700 text-white rounded-full w-4 h-4 flex items-center justify-center shrink-0 text-[10px] mt-0.5 shadow-2xs">1</span>
+                                                <span>將賽錢輕輕地投入賽錢箱中（一般常投 <strong>5 日圓 </strong>，因日文中「5圓」與「結緣」同音），雖然較少見但也可以投 50 日圓。</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <span class="font-bold bg-amber-700 text-white rounded-full w-4 h-4 flex items-center justify-center shrink-0 text-[10px] mt-0.5 shadow-2xs">2</span>
+                                                <span>若前方有搖鈴，可輕搖一次。</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <span class="font-bold bg-amber-700 text-white rounded-full w-4 h-4 flex items-center justify-center shrink-0 text-[10px] mt-0.5 shadow-2xs">3</span>
+                                                <span>深深彎腰 90 度進行<strong>兩次鞠躬禮 (二禮)</strong>。</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <span class="font-bold bg-amber-700 text-white rounded-full w-4 h-4 flex items-center justify-center shrink-0 text-[10px] mt-0.5 shadow-2xs">4</span>
+                                                <span>於胸前<strong>雙手合十，右手掌要略低於左手掌，拍兩次手 (二拍手)</strong> 後，雙手合十開始向神明訴說願望與祈福。</span>
+                                            </li>
+                                            <li class="flex items-start gap-2">
+                                                <span class="font-bold bg-amber-700 text-white rounded-full w-4 h-4 flex items-center justify-center shrink-0 text-[10px] mt-0.5 shadow-2xs">5</span>
+                                                <span>與神明訴說完願望後右手復位，最後<strong>再深深一鞠躬 (一禮)</strong>，即完成參拜。</span>
+                                            </li>
+                                        </ol>
                                     </div>
-                                    <p>① 站立於拜殿前直立，投賽錢（常投 5 日圓，象徵結緣）。</p>
-                                    <p>② 若有鈴鐺可輕搖一次。</p>
-                                    <p>③ 深深彎腰 90 度敬禮 <strong>二次 (二禮)</strong>。</p>
-                                    <p>④ 於胸前雙手合十拍手 <strong>二次 (二拍手)</strong>，心中默念許願。</p>
-                                    <p>⑤ 許願完畢後再次深深彎腰敬禮 <strong>一次 (一禮)</strong> 完成參拜。</p>
                                 </div>
+                        
                             </div>
                         </div>
-
+                
                     </div>
                 </section>
 
